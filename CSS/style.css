@@ -1,0 +1,44 @@
+
+/* Main colours */
+:root {
+--custom1: #52d3f0;
+--custom2: #ffcf40;
+--custom3: #1ca2c1;
+--custom4: #252525;
+--custom5: #e8e8e8;
+--custom6: #019101;
+--custom7: #f6f5f2;
+}
+
+/* General */
+html {
+    max-width: 1400px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ----- MOBILE ----- */
+#global-header {
+    display: flex;
+    flex-direction: row;
+}
+
+#search-bar {
+    display: none;
+}
+
+#hamburgerMenu {
+
+}
+
+@media (min-width: 450px) {
+    #search-bar {
+        display: block;
+    }
+
+    #hamburgerButton {
+        display: none;
+    }
+}

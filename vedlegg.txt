@@ -1,0 +1,31 @@
+---- GitHub repository: ----
+
+https://github.com/Snick92/Kontinuasjonseksamen---Webutvikling-2025
+
+
+
+
+---- Antakelser: ----
+
+Basert på erfaringer jeg har tilegnet meg både under og etter forrige forsøk (som gikk som det gikk),
+er det rimelig å anta at denne gangen forhåpentligvis kommer til å gå litt smidigere.
+
+Jeg føler meg mer selvsikker på hvordan jeg kan gjøre nettstedet responsivt - noe jeg brukte altfor lang tid på sist.
+Jeg har øvet meg en del på semantisk oppbygging av HTML, og tenker at jeg kommer til å få til dette greit.
+
+Utfordringen denne gangen ser jeg for meg blir søkemotoroptimalisering. Dette rakk jeg aldri å starte helt på,
+og jeg forventer derfor at det kommer til å føles relativt nytt igjen.
+
+
+
+---- Tolkninger: ----
+
+
+
+
+---- Kilder: ----
+
+
+
+
+---- AI prompts (hvis relevant): ----
