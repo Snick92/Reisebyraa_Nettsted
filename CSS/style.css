@@ -10,7 +10,7 @@
 --custom7: #f6f5f2;
 }
 
-/* General */
+/* General web-site values */
 html {
     max-width: 1400px;
     font-family: "Montserrat", serif;
@@ -23,6 +23,11 @@ html {
     margin: 0;
 }
 
+
+
+
+/* --   MOBILE   -- */
+/* -- BODY START -- */
 #grid-container-body {
     display: grid;
     grid-template-areas: 
@@ -31,14 +36,14 @@ html {
     "footer";
 }
 
-/* ----- MOBILE ----- */
-/* HEADER */
+/* -- HEADER START -- */
 #global-header {
     grid-area: header;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0.5rem;
 }
 
 #global-header img {
@@ -52,15 +57,15 @@ html {
     gap: 1rem;
     align-items: center;
 }
-#userIcon {
+#user-icon {
     font-size: 2rem;
     color: var(--custom4);
 }
-#searchIcon {
+#search-icon {
     font-size: 2rem;
     color: var(--custom4);
 }
-.hamburgerLink {
+.hamburger-link {
     display: none;
 }
 
@@ -68,35 +73,48 @@ html {
     display: none;
 }
 
-#hamburgerMenu {
+#hamburger-menu {
     
 }
 
-#hamburgerButton {
+#hamburger-button {
     background-color: rgba(255, 255, 255, 0);
     font-size: 2rem;
     color: var(--custom4);
 }
 
-#userLinks p{
+#user-links p{
     display: none;
 }
+/* -- HEADER END -- */
 
-/* FORM */
-#travelForm a {
+
+
+/* -- MAIN START -- */
+/* Order form (with scroll menu): */
+nav.scroll-menu {
+    
+}
+nav.scroll-menu a {
     color: var(--custom4);
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
 }
 
-/* FOOTER */
+/* -- MAIN END -- */
+
+/* -- FOOTER START -- */
 footer {
     grid-area: footer;
     display: grid;
     padding: 2rem;
     grid-template-rows: 
-        auto 
-        auto 
-        auto 
-        auto;
+        "auto" 
+        "auto" 
+        "auto" 
+        "auto";
     background-color: var(--custom4);
     font-size: 0.7rem;
 }
@@ -106,7 +124,7 @@ footer h3 {
 footer, p h3 {
     color: var(--custom7);
 }
-#customerService, ul, a {
+#customer-service, ul, li, a {
     list-style: none;
     text-decoration: none;
     color: var(--custom7);
@@ -126,10 +144,10 @@ footer, p h3 {
     margin-left: 1.2rem;
 }
 
-#paymentOptions {
+#payment-options {
     padding-top: 2rem;
 }
-#paymentOptions ul{
+#payment-options ul{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -137,27 +155,27 @@ footer, p h3 {
     padding-left: 0;
     padding-top: 1rem;
 }
-#paymentOptions li{
+#payment-options li{
     margin-right: 1rem;
     font-size: 2rem;
 }
 
-#newsAndOffers_customerService_flexspace{
+#flex-container-in-footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 2rem;
 }
 
-#newsAndOffers {
+#news-and-offers {
 
     margin-right: 0.5rem;
     padding-bottom: 2rem;
 }
-#newsAndOffers h3{
+#news-and-offers h3{
     padding-bottom: 2rem;
 }
-#newsAndOffersOverlayText {
+#news-and-offers-overlaytext {
     position: relative;
     left: 0.5rem;
     top: -0.7rem;
@@ -166,7 +184,7 @@ footer, p h3 {
     z-index: 1;
     width: 10rem;
 }
-#newsAndOffers form {
+#news-and-offers form {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -177,7 +195,7 @@ footer, p h3 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-#newsAndOffers input {
+#news-and-offers input {
     background-color: var(--custom7);
     color: var(--custom4);
     border: none;
@@ -190,7 +208,7 @@ footer, p h3 {
     text-align: start;
     font-size: 10px;
 }
-#newsAndOffers button {
+#news-and-offers button {
     background-color: var(--custom2);
     border: none;
     border-radius: 0.2rem;
@@ -200,35 +218,45 @@ footer, p h3 {
 }
 
 
-#customerService {
+#customer-service {
     padding-bottom: 2rem;
 }
-#customerService ul{
+#customer-service ul{
     position: relative;
     top: 1.3rem;
 }
 
-#socialMedia li {
+#social-media li {
     display: inline-block;
     margin-right: 1rem;
     font-size: 1.5rem;
 }
-#socialMedia h3{
+#social-media h3{
     padding-bottom: 1rem;
 }
+/* -- FOOTER END -- */
+/* -- MOBILE END -- */
 
 
+
+/* -- DESKTOP START -- */
+/* Hidden & shown */
 @media (min-width: 600px) {
-    #hamburgerButton {
+    #hamburger-button {
         display: none;
     }
     #search-bar {
         display: block;
     }
-    .hamburgerLink {
+    .hamburger-link {
         display: block;
+        color: var(--custom4);
     }
-    #userLinks p {
+    #user-links p {
         display: block;
+        color: var(--custom4);
     }
 }
+
+
+/* -- DESKTOP END -- */
