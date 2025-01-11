@@ -14,15 +14,54 @@
 html {
     max-width: 1400px;
     font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#grid-container-body {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
 /* ----- MOBILE ----- */
+/* HEADER */
 #global-header {
+    grid-area: header;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#global-header img {
+    height: 60px;
+    width: 60px;
+}
+
+#global-header-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+#userIcon {
+    font-size: 2rem;
+    color: var(--custom4);
+}
+#searchIcon {
+    font-size: 2rem;
+    color: var(--custom4);
+}
+.hamburgerLink {
+    display: none;
 }
 
 #search-bar {
@@ -30,15 +69,166 @@ html {
 }
 
 #hamburgerMenu {
-
+    
 }
 
-@media (min-width: 450px) {
+#hamburgerButton {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 2rem;
+    color: var(--custom4);
+}
+
+#userLinks p{
+    display: none;
+}
+
+/* FORM */
+#travelForm a {
+    color: var(--custom4);
+}
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    display: grid;
+    padding: 2rem;
+    grid-template-rows: 
+        auto 
+        auto 
+        auto 
+        auto;
+    background-color: var(--custom4);
+    font-size: 0.7rem;
+}
+footer h3 {
+    font-weight: 800;
+}
+footer, p h3 {
+    color: var(--custom7);
+}
+#customerService, ul, a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--custom7);
+}
+
+#flags {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+#flags img{
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+    margin-left: 1.2rem;
+}
+
+#paymentOptions {
+    padding-top: 2rem;
+}
+#paymentOptions ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-top: 1rem;
+}
+#paymentOptions li{
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+#newsAndOffers_customerService_flexspace{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+#newsAndOffers {
+
+    margin-right: 0.5rem;
+    padding-bottom: 2rem;
+}
+#newsAndOffers h3{
+    padding-bottom: 2rem;
+}
+#newsAndOffersOverlayText {
+    position: relative;
+    left: 0.5rem;
+    top: -0.7rem;
+    padding-right: 0;
+    background-color: var(--custom4);
+    z-index: 1;
+    width: 10rem;
+}
+#newsAndOffers form {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 1.1rem;
+    border: 2px solid var(--custom7);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#newsAndOffers input {
+    background-color: var(--custom7);
+    color: var(--custom4);
+    border: none;
+    border-radius: 0.2rem;
+    height: 1.5rem;
+    width: 8rem;
+    margin-right: 0.3rem;
+    padding: 0.2rem;
+
+    text-align: start;
+    font-size: 10px;
+}
+#newsAndOffers button {
+    background-color: var(--custom2);
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0.2rem;
+}
+
+
+#customerService {
+    padding-bottom: 2rem;
+}
+#customerService ul{
+    position: relative;
+    top: 1.3rem;
+}
+
+#socialMedia li {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+#socialMedia h3{
+    padding-bottom: 1rem;
+}
+
+
+@media (min-width: 600px) {
+    #hamburgerButton {
+        display: none;
+    }
     #search-bar {
         display: block;
     }
-
-    #hamburgerButton {
-        display: none;
+    .hamburgerLink {
+        display: block;
+    }
+    #userLinks p {
+        display: block;
     }
 }

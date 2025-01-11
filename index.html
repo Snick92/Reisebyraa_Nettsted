@@ -14,36 +14,88 @@
     <body>
         <div id="grid-container-body">
             <header id="global-header">
-                <img rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
-                <section>
-                    <form id="search-bar">
-                        <input type="text" placeholder="Søk her">
-                        <a href="order.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="index.html">
+                    <img rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
+                </a>
+                <section id="global-header-links">
+                    <form>
+                        <input id="search-bar" type="text" placeholder="Søk her">
+                        <a href="order.html" id="searchIcon"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </form>
-                    <nav>
-                        <a href="#">Opprett en konto</a>
-                        <a href="#"><i class="fa-solid fa-user"></i>Min side</a>
+                    <nav id="userLinks">
+                        <a href="#"><p>Opprett en konto</p></a>
+                        <a href="#" id="userIcon"><i class="fa-regular fa-user"></i><p>Min side</p></a>
                     </nav>
-                </section>
-                <section id="hamburgerMenu">
-                    <button id="hamburgerButton"><i class="fa-solid fa-bars"></i></button>
-                    <a href="#">Tips og inspirasjon</a>
-                    <a href="hotell.html">Hotell</a>
-                    <a href="https://www.norwegian.no" target="_blank">Fly</a>
-                    <a href="#">Kontakt</a>
+                    <nav id="hamburgerMenu">
+                        <a href="#" id="hamburgerButton"><i class="fa-solid fa-bars"></i></a>
+                        <a href="#" class="hamburgerLink">Tips og inspirasjon</a>
+                        <a href="hotell.html" class="hamburgerLink">Hotell</a>
+                        <a href="https://www.norwegian.no" class="hamburgerLink" target="_blank">Fly</a>
+                        <a href="#" class="hamburgerLink">Kontakt</a>
+                    </nav>
                 </section>
             </header>
             <main>
-                <h1>Main</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio natus minus deleniti iste voluptate itaque magnam. Laboriosam consequatur omnis qui.</p>
+                <section id="travelForm">
+                    <nav id="travelFormCategories">
+                        <a href="#"><i class="fa-solid fa-suitcase"></i>Fly + Hotell</a>
+                        <a href="#"><i class="fa-solid fa-plane"></i>Fly</a>
+                        <a href="#"><i class="fa-solid fa-city"></i>Storby</a>
+                        <a href="#"><i class="fa-solid fa-person-skiing"></i>Ski</a>
+                        <a href="#"><i class="fa-solid fa-map-location-dot"></i>Kombinasjonsreiser</a>
+                    </nav>
+                </section>
             </main>
-            <footer>
-                <h1>Footer</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, fugiat?</p>
+            <footer id="global-footer">
+                <section id="flags">
+                    <p><img src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">Sverige</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">Danmark</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">Norge</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">Finland</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">Nederland</p>
+                </section>
+                <section id="paymentOptions">
+                    <h3>BETALINGSMETODER</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-cc-visa"></i></li>
+                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                        <li><i class="fa-brands fa-cc-paypal"></i></li>
+                        <li><i class="fa-brands fa-cc-apple-pay"></i></li>
+                        <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
+                    </ul>
+                </section>
+                <section id="newsAndOffers_customerService_flexspace">
+                    <nav id="newsAndOffers">
+                        <h3>NYHETER & TILBUD</h3>
+                        <p id="newsAndOffersOverlayText">Meld deg på nyhetsbrev her</p>
+                        <form>
+                            <input type="text" placeholder="ola@example.com...">
+                            <button>Send</button>
+                        </form>
+                        <a href="#">Kjøp reisegavekort</a>
+                    </nav>
+                    <nav id="customerService">
+                        <h3>KUNDESERVICE</h3>
+                        <ul>
+                            <li><a href="#">Spørsmål og svar</a></li>
+                            <li><a href="#">Chat</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                            <li><a href="#">Tilgjengelighets-erklæring</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section id="socialMedia">
+                    <h3>SOSIALE MEDIER</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://no.pinterest.com/#top"><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href="https://www.tiktok.com/explore"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </section>
             </footer>
             <aside>
-                <h1>Aside</h1>
-                
             </aside>
         </div>
     </body>
