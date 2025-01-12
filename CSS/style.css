@@ -60,7 +60,7 @@ html {
 
 
 /* GRID: HEADER-1 */
-#global-header-top-nav {
+#global-header-top-nav-container {
     grid-area: header-1;
     display: flex;
     flex-wrap: wrap;
@@ -71,12 +71,7 @@ html {
     width: 60px;
     margin: 0.5rem;
 }
-#user-icon {
-    font-size: 2rem;
-    color: var(--custom4);
-    padding-left: 1rem;
-}
-#search-icon {
+.top-nav-icons {
     font-size: 2rem;
     color: var(--custom4);
     padding-left: 1rem;
@@ -90,10 +85,10 @@ html {
     color: var(--custom4);
     padding-left: 1rem;
 }
-#user-links p{
+.top-nav-user-links {
     display: none;
 }
-#top-nav-buttons {
+#top-nav-icons-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -114,16 +109,19 @@ html {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    border: 2px solid purple;
 }
 .scroll-menu{
     display: inline-block;
     overflow-x: scroll;
-    background-color: red;
+    border: 2px solid red;
 }
 .scroll-menu-item {
-
+    color: var(--custom4);
+    text-decoration: none;
     margin-left: 1rem;
     margin-right: 1rem;
+    border: 2px dotted blue;
 }
 /* GRID: HEADER-3 */
 
@@ -157,12 +155,22 @@ footer h3 {
 footer, p h3 {
     color: var(--custom7);
 }
-.customer-service-link{
+
+/* Kundeservice */
+#customer-service {
+    padding-bottom: 2rem;
+}
+#customer-service ul{
     list-style: none;
+    position: relative;
+    top: 1.3rem;
+}
+.customer-service-link {
     text-decoration: none;
-    color: var(--custom4);
+    color: var(--custom7);
 }
 
+/* Flagg */
 #flags {
     display: flex;
     flex-wrap: wrap;
@@ -177,6 +185,7 @@ footer, p h3 {
     margin-left: 1.2rem;
 }
 
+/* Betalingsmetoder */
 #payment-options {
     padding-top: 2rem;
 }
@@ -185,6 +194,7 @@ footer, p h3 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
+    list-style: none;
     padding-left: 0;
     padding-top: 1rem;
 }
@@ -193,7 +203,7 @@ footer, p h3 {
     font-size: 2rem;
 }
 
-#flex-container-in-footer{
+#footer-news-and-customerservice-wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -201,7 +211,6 @@ footer, p h3 {
 }
 
 #news-and-offers {
-
     margin-right: 0.5rem;
     padding-bottom: 2rem;
 }
@@ -237,7 +246,6 @@ footer, p h3 {
     width: 8rem;
     margin-right: 0.3rem;
     padding: 0.2rem;
-
     text-align: start;
     font-size: 10px;
 }
@@ -249,20 +257,20 @@ footer, p h3 {
     font-weight: bold;
     padding: 0.2rem;
 }
-
-
-#customer-service {
-    padding-bottom: 2rem;
-}
-#customer-service ul{
-    position: relative;
-    top: 1.3rem;
+#news-and-offers a{
+    color: var(--custom7);
+    text-decoration: none;
 }
 
+
+/* Sosiale medier */
 #social-media li {
     display: inline-block;
     margin-right: 1rem;
     font-size: 1.5rem;
+}
+#social-media a {
+    color: var(--custom7);
 }
 #social-media h3{
     padding-bottom: 1rem;

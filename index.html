@@ -14,25 +14,26 @@
     <body>
         <div id="grid-container-body">
             <header id="global-header-grid-container">
-                <section id="global-header-top-nav">
+                <section id="global-header-top-nav-container">
                     <a href="index.html">
                         <img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
                     </a>
-                    <div id="top-nav-buttons">
+                    <div id="top-nav-icons-container">
                         <form>
                             <input id="search-bar" type="text" placeholder="Søk her">
-                            <a id="search-icon" href="order.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
                         </form>
-                        <nav id="user-links">
-                            <a href="#">Opprett en konto</a>
-                            <a href="#" id="user-icon"><i class="fa-regular fa-user"></i>Min side</a>
+                        <nav>
+                            <a href="#" class="top-nav-user-links">Opprett en konto</a>
+                            <a href="#" class="top-nav-icons"><i class="fa-regular fa-user"></i></a>
+                            <a href="#" class="top-nav-user-links">Min side</a>
                         </nav>
                         <nav id="hamburger-menu">
                             <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
-                            <a href="#" class="hamburger-link">Tips og inspirasjon</a>
-                            <a href="hotell.html" class="hamburger-link">Hotell</a>
-                            <a href="https://www.norwegian.no" class="hamburger-link" target="_blank">Fly</a>
-                            <a href="#" class="hamburger-link">Kontakt</a>
+                            <a href="#" class="top-nav-user-links">Tips og inspirasjon</a>
+                            <a href="hotell.html" class="top-nav-user-links">Hotell</a>
+                            <a href="https://www.norwegian.no" class="top-nav-user-links" target="_blank">Fly</a>
+                            <a href="#" class="top-nav-user-links">Kontakt</a>
                         </nav>
                     </div>
                     <img id="banner-img" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
@@ -46,7 +47,7 @@
                         <a class="scroll-menu-item" href="#"><i class="fa-solid fa-map-location-dot"></i>Kombinasjonsreiser</a>
                     </nav>
                     <form name="travel-from">
-                        <label for="fra">Fra</label>
+                        <label>Fra</label>
                         <select>
                             <option value="Oslo Lufthavn">Oslo Lufthavn</option>
                             <option value="Torp Sandefjord Lufthavn">Torp Sandefjord Lufthavn</option>
@@ -55,7 +56,7 @@
                         </select>
                     </form>
                     <form name="travel-to">
-                        <label for="til">Til</label>
+                        <label>Til</label>
                         <select>
                             <option value="Albania">Albania</option>
                             <option value="Danmark">Danmark</option>
@@ -64,7 +65,7 @@
                         </select>
                     </form>
                     <form name="timeframe">
-                        <label for="reiselengde">Reiselengde</label>
+                        <label>Reiselengde</label>
                         <select>
                             <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
                             <option value="1 uke">1 uke</option>
@@ -73,11 +74,11 @@
                         </select>
                     </form>
                     <form name="choose-date">
-                        <label for="velg dato">Velg dato</label>
+                        <label>Velg dato</label>
                         <input type="date" name="velg-dato">
                     </form>
                     <form name="travelers-amount">
-                        <label for="antall reisende">Antall reisende</label>
+                        <label>Antall reisende</label>
                         <input type="number" min="1">
                     </form>
                     <button name="search-button">Søk</button>
@@ -103,7 +104,7 @@
                         <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
                     </ul>
                 </section>
-                <section id="flex-container-in-footer">
+                <section id="footer-news-and-customerservice-wrapper">
                     <nav id="news-and-offers">
                         <h3>NYHETER & TILBUD</h3>
                         <p id="news-and-offers-overlaytext">Meld deg på nyhetsbrev her</p>
