@@ -13,30 +13,31 @@
     </head>
     <body>
         <div id="grid-container-body">
-            <header id="global-header">
-                <a href="index.html">
-                    <img rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
-                </a>
-                <section id="global-header-links">
-                    <form>
-                        <input id="search-bar" type="text" placeholder="Søk her">
-                        <a id="search-icon" href="order.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </form>
-                    <nav id="user-links">
-                        <a href="#"><p>Opprett en konto</p></a>
-                        <a href="#" id="user-icon"><i class="fa-regular fa-user"></i><p>Min side</p></a>
-                    </nav>
-                    <nav id="hamburger-menu">
-                        <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
-                        <a href="#" class="hamburger-link">Tips og inspirasjon</a>
-                        <a href="hotell.html" class="hamburger-link">Hotell</a>
-                        <a href="https://www.norwegian.no" class="hamburger-link" target="_blank">Fly</a>
-                        <a href="#" class="hamburger-link">Kontakt</a>
-                    </nav>
+            <header id="global-header-grid-container">
+                <section id="global-header-top-nav">
+                    <a href="index.html">
+                        <img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
+                    </a>
+                    <div id="top-nav-buttons">
+                        <form>
+                            <input id="search-bar" type="text" placeholder="Søk her">
+                            <a id="search-icon" href="order.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </form>
+                        <nav id="user-links">
+                            <a href="#">Opprett en konto</a>
+                            <a href="#" id="user-icon"><i class="fa-regular fa-user"></i>Min side</a>
+                        </nav>
+                        <nav id="hamburger-menu">
+                            <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
+                            <a href="#" class="hamburger-link">Tips og inspirasjon</a>
+                            <a href="hotell.html" class="hamburger-link">Hotell</a>
+                            <a href="https://www.norwegian.no" class="hamburger-link" target="_blank">Fly</a>
+                            <a href="#" class="hamburger-link">Kontakt</a>
+                        </nav>
+                    </div>
+                    <img id="banner-img" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
                 </section>
-            </header>
-            <main>
-                <section class="scroll-menu-container">
+                <section id="global-header-form-container">
                     <nav class="scroll-menu">
                         <a class="scroll-menu-item" href="#"><i class="fa-solid fa-suitcase"></i>Fly + Hotell</a>
                         <a class="scroll-menu-item" href="#"><i class="fa-solid fa-plane"></i>Fly</a>
@@ -44,7 +45,45 @@
                         <a class="scroll-menu-item" href="#"><i class="fa-solid fa-person-skiing"></i>Ski</a>
                         <a class="scroll-menu-item" href="#"><i class="fa-solid fa-map-location-dot"></i>Kombinasjonsreiser</a>
                     </nav>
+                    <form name="travel-from">
+                        <label for="fra">Fra</label>
+                        <select>
+                            <option value="Oslo Lufthavn">Oslo Lufthavn</option>
+                            <option value="Torp Sandefjord Lufthavn">Torp Sandefjord Lufthavn</option>
+                            <option value="Bergen Lufthavn">Bergen Lufthavn</option>
+                            <option value="Alta Lufthavn">Alta Lufthavn</option>
+                        </select>
+                    </form>
+                    <form name="travel-to">
+                        <label for="til">Til</label>
+                        <select>
+                            <option value="Albania">Albania</option>
+                            <option value="Danmark">Danmark</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Hellas">Hellas</option>
+                        </select>
+                    </form>
+                    <form name="timeframe">
+                        <label for="reiselengde">Reiselengde</label>
+                        <select>
+                            <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
+                            <option value="1 uke">1 uke</option>
+                            <option value="2 uker">2 uker</option>
+                            <option value="Mer enn 2 uker">Mer enn 2 uker</option>
+                        </select>
+                    </form>
+                    <form name="choose-date">
+                        <label for="velg dato">Velg dato</label>
+                        <input type="date" name="velg-dato">
+                    </form>
+                    <form name="travelers-amount">
+                        <label for="antall reisende">Antall reisende</label>
+                        <input type="number" min="1">
+                    </form>
+                    <button name="search-button">Søk</button>
                 </section>
+            </header>
+            <main>
             </main>
             <footer id="global-footer">
                 <section id="flags">
@@ -77,10 +116,10 @@
                     <nav id="customer-service">
                         <h3>KUNDESERVICE</h3>
                         <ul>
-                            <li><a href="#">Spørsmål og svar</a></li>
-                            <li><a href="#">Chat</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">Tilgjengelighets-erklæring</a></li>
+                            <li><a class="customer-service-link" href="#">Spørsmål og svar</a></li>
+                            <li><a class="customer-service-link" href="#">Chat</a></li>
+                            <li><a class="customer-service-link" href="#">Kontakt</a></li>
+                            <li><a class="customer-service-link" href="#">Tilgjengelighets-erklæring</a></li>
                         </ul>
                     </nav>
                 </section>

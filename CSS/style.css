@@ -1,4 +1,4 @@
-
+/* -- GENERAL -- */
 /* Main colours */
 :root {
 --custom1: #52d3f0;
@@ -15,6 +15,7 @@ html {
     max-width: 1400px;
     font-family: "Montserrat", serif;
     font-style: normal;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -23,10 +24,20 @@ html {
     margin: 0;
 }
 
+/* -- ANIMATIONS, CONDITIONS & EFFECTS -------------------------------------------------------------- */
+#hamburger-menu {
+
+}
+.hamburger-link {
+    display: none;
+}
+#hamburger-button {
+
+}
 
 
+/* -- MOBILE ---------------------------------------------------------------------------- */
 
-/* --   MOBILE   -- */
 /* -- BODY START -- */
 #grid-container-body {
     display: grid;
@@ -37,71 +48,93 @@ html {
 }
 
 /* -- HEADER START -- */
-#global-header {
+#global-header-grid-container {
     grid-area: header;
+    display: grid;
+    grid-template-areas: 
+        "header-1"
+        "header-2"
+        "header-3"
+        "header-4";
+}
+
+
+/* GRID: HEADER-1 */
+#global-header-top-nav {
+    grid-area: header-1;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0.5rem;
 }
-
-#global-header img {
+#logo {
     height: 60px;
     width: 60px;
-}
-
-#global-header-links {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
+    margin: 0.5rem;
 }
 #user-icon {
     font-size: 2rem;
     color: var(--custom4);
+    padding-left: 1rem;
 }
 #search-icon {
     font-size: 2rem;
     color: var(--custom4);
+    padding-left: 1rem;
 }
-.hamburger-link {
-    display: none;
-}
-
 #search-bar {
     display: none;
 }
-
-#hamburger-menu {
-    
-}
-
 #hamburger-button {
     background-color: rgba(255, 255, 255, 0);
     font-size: 2rem;
     color: var(--custom4);
+    padding-left: 1rem;
 }
-
 #user-links p{
     display: none;
 }
+#top-nav-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem;
+}
+#banner-img {
+    grid-area: header-1;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* GRID: HEADER-2 */
+#global-header-form-container {
+    grid-area: header-2;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.scroll-menu{
+    display: inline-block;
+    overflow-x: scroll;
+    background-color: red;
+}
+.scroll-menu-item {
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+/* GRID: HEADER-3 */
+
+/* GRID: HEADER-4 */
+
 /* -- HEADER END -- */
 
 
 
 /* -- MAIN START -- */
-/* Order form (with scroll menu): */
-nav.scroll-menu {
-    
-}
-nav.scroll-menu a {
-    color: var(--custom4);
-    display: inline-block;
-    text-align: center;
-    padding: 1rem;
-    text-decoration: none;
-}
+
 
 /* -- MAIN END -- */
 
@@ -124,10 +157,10 @@ footer h3 {
 footer, p h3 {
     color: var(--custom7);
 }
-#customer-service, ul, li, a {
+.customer-service-link{
     list-style: none;
     text-decoration: none;
-    color: var(--custom7);
+    color: var(--custom4);
 }
 
 #flags {
@@ -239,7 +272,7 @@ footer, p h3 {
 
 
 
-/* -- DESKTOP START -- */
+/* -- DESKTOP --------------------------------------------------------------------------- */
 /* Hidden & shown */
 @media (min-width: 600px) {
     #hamburger-button {
@@ -259,4 +292,3 @@ footer, p h3 {
 }
 
 
-/* -- DESKTOP END -- */
