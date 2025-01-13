@@ -105,15 +105,18 @@ html {
 #global-header-form-container {
     grid-area: header-2;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border: 2px solid purple;
+    border: 2px solid greenyellow;
 }
 .scroll-menu{
-    display: inline-block;
-    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
     border: 2px solid red;
 }
 .scroll-menu-item {
