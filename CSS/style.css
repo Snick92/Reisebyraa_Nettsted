@@ -110,22 +110,33 @@ html {
     flex-direction: column;
     border: 2px solid greenyellow;
 }
-.scroll-menu{
+#global-header-form-container #scroll-menu-container{
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: thin;
+    gap: 1rem;
+    overflow: scroll;
     border: 2px solid red;
 }
-.scroll-menu-item {
-    color: var(--custom4);
-    text-decoration: none;
-    margin-left: 1rem;
-    margin-right: 1rem;
+#global-header-form-container #scroll-menu-container article a{
+    position: relative;
+    display: inline-block;
+    
+}
+#scroll-menu-item {
+    
     border: 2px dotted blue;
 }
+
+/* 
+display: flex;
+flex-direction: row;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+overflow-x: auto;
+padding: 20px 0;
+-webkit-overflow-scrolling: touch;
+*/
+
 /* GRID: HEADER-3 */
 
 /* GRID: HEADER-4 */
@@ -257,8 +268,10 @@ footer, p h3 {
     border: none;
     border-radius: 0.2rem;
     font-size: 10px;
-    font-weight: bold;
     padding: 0.2rem;
+}
+#news-and-offers button {
+    font-weight: bold;
 }
 #news-and-offers a{
     color: var(--custom7);
