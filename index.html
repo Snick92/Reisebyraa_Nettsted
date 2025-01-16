@@ -12,119 +12,227 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="grid-container">
-            <header id="grid-container-header">
-                <section id="global-header-top-nav-container">
-                    <a href="index.html">
-                        <img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
-                    </a>    
-                    <nav id="top-nav-icons-container">
-                        <ul id="search-bar-wrapper">
-                            <li>
-                                <form>
-                                    <input id="search-bar" type="text" placeholder="Søk her">
-                                    <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                                </form>
-                            </li>
-                        </ul>
-                        <ul id="user-links-wrapper">
-                            <li>
-                                <a href="#" class="top-nav-user-links">Opprett en konto</a>
-                            </li>
-                            <li>
-                                <a href="#" class="top-nav-icons"><i class="fa-regular fa-user"></i><span>Min side</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="top-nav-user-links">Min side</a>
-                            </li>
-                        </ul>
-                        <ul id="hamburger-menu-wrapper">
-                            <li>
-                                <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="top-nav-user-links">Tips og inspirasjon</a>
-                            </li>
-                            <li>
-                                <a href="hotell.html" class="top-nav-user-links">Hotell</a>
-                            </li>
-                            <li>
-                                <a href="https://www.norwegian.no" class="top-nav-user-links" target="_blank">Fly</a>
-                            </li>
-                            <li>
-                                <a href="#" class="top-nav-user-links">Kontakt</a>
-                            </li>
-                        </ul>
+        <div id="primary-grid-container">
+            <header id="global-header-flex-container"><!------------------ grid-area: header; (desktop) --------------------------------------->
+                <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>    
+                <nav>
+                    <ul id="search-bar-wrapper">
+                        <li>
+                            <form>
+                                <input id="search-bar" type="text" placeholder="Søk her">
+                                <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul id="buttons-wrapper">
+                        <li>
+                            <a href="#" class="top-nav-user-links">Opprett en konto</a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-icons"><i class="fa-regular fa-user"></i><span>Min side</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-user-links">Min side</a>
+                        </li>
+                    </ul>
+                    <ul id="hamburger-wrapper">
+                        <li>
+                            <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-user-links">Tips og inspirasjon</a>
+                        </li>
+                        <li>
+                            <a href="hotell.html" class="top-nav-user-links">Hotell</a>
+                        </li>
+                        <li>
+                            <a href="https://www.norwegian.no" class="top-nav-user-links" target="_blank">Fly</a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-user-links">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <header id="global-header-grid-container">
+                <section id="banner"> <!-- grid-area: 1/3 -->
+                    <img src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
+                </section>
+                <section id="order-form"> <!-- grid-area: 2/4 -->
+                    <nav id="scroll-menu-container">
+                        <article class="scroll-menu-item">
+                            <a href="#"><i class="fa-solid fa-suitcase"></i></a>
+                            <a href="#">Fly + Hotell</a>
+                        </article>
+                        <article class="scroll-menu-item">
+                            <a href="#"><i class="fa-solid fa-plane"></i></a>
+                            <a href="#">Fly</a>
+                        </article>
+                        <article class="scroll-menu-item">
+                            <a href="#"><i class="fa-solid fa-city"></i></a>
+                            <a href="#">Storby</a>
+                        </article>
+                        <article class="scroll-menu-item">
+                            <a href="#"><i class="fa-solid fa-person-skiing"></i></a>
+                            <a href="#">Ski</a>
+                        </article>
+                        <article class="scroll-menu-item">
+                            <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+                            <a href="#">Kombinasjonsreiser</a>
+                        </article>
                     </nav>
-                    <img id="banner-img" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
+                    <article id="scroll-indicator">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </article>
+                    <form name="travel-from">
+                        <label>Fra</label>
+                        <select>
+                            <option value="Oslo Lufthavn">Oslo Lufthavn</option>
+                            <option value="Torp Sandefjord Lufthavn">Torp Sandefjord Lufthavn</option>
+                            <option value="Bergen Lufthavn">Bergen Lufthavn</option>
+                            <option value="Alta Lufthavn">Alta Lufthavn</option>
+                        </select>
+                    </form>
+                    <form name="travel-to">
+                        <label>Til</label>
+                        <select>
+                            <option value="Albania">Albania</option>
+                            <option value="Danmark">Danmark</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Hellas">Hellas</option>
+                        </select>
+                    </form>
+                    <form name="timeframe">
+                        <label>Reiselengde</label>
+                        <select>
+                            <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
+                            <option value="1 uke">1 uke</option>
+                            <option value="2 uker">2 uker</option>
+                            <option value="Mer enn 2 uker">Mer enn 2 uker</option>
+                        </select>
+                    </form>
+                    <form name="choose-date">
+                        <label>Velg dato</label>
+                        <input type="date" name="velg-dato">
+                    </form>
+                    <form name="travelers-amount">
+                        <label>Antall reisende</label>
+                        <input type="number" min="1">
+                    </form>
+                    <button name="search-button">Søk</button>
                 </section>
             </header>
-            <header id="header-travelform-container">
-                <nav id="scroll-menu-container">
-                    <article class="scroll-menu-item">
-                        <a href="#"><i class="fa-solid fa-suitcase"></i></a>
-                        <a href="#">Fly + Hotell</a>
+            <main><!-------------------------------------------------- grid-area: main; (desktop) ----------------------------------------->
+                <section id="main-campaign"> <!-- Flex container -->
+                    <article>
+                        <ul>
+                            <li><h2>Bestill sommerens beste uke</h2></li>
+                            <li>Fly + hotell, 7 dager</li>
+                            <li>Fra 3 298,-</li>
+                        </ul>
                     </article>
-                    <article class="scroll-menu-item">
-                        <a href="#"><i class="fa-solid fa-plane"></i></a>
-                        <a href="#">Fly</a>
+                    <a href="hotell.html">Bestill i dag</a>
+                </section>
+                <section id="main-offers"> <!-- Flex container -->
+                    <article class="offers-card">
+                        <ul>
+                            <li><h3>Få ekslusive tilbud</h3></li>
+                            <li><a href="#">Logg inn/opprett konto og få rabattkoder<i class="fa-solid fa-angles-right"></i></a></li>
+                        </ul>
                     </article>
-                    <article class="scroll-menu-item">
-                        <a href="#"><i class="fa-solid fa-city"></i></a>
-                        <a href="#">Storby</a>
+                    <article class="offers-card">
+                        <ul>
+                            <li><h3>Billige resteplasser</h3></li>
+                            <li><a href="#">Opptil 50% rabatt<i class="fa-solid fa-angles-right"></i></a></li>
+                        </ul>
                     </article>
-                    <article class="scroll-menu-item">
-                        <a href="#"><i class="fa-solid fa-person-skiing"></i></a>
-                        <a href="#">Ski</a>
+                    <article class="offers-card">
+                        <ul>
+                            <li><h3>Mars - spar opptil 5000,-</h3></li>
+                            <li><a href="#">Sikre deg et ferie-kupp<i class="fa-solid fa-angles-right"></i></a></li>
+                        </ul>
                     </article>
-                    <article class="scroll-menu-item">
-                        <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
-                        <a href="#">Kombinasjonsreiser</a>
+                </section>
+                <section id="tips-and-inspiration"> <!-- Flex container -->
+                    <h2>Tips & inspirasjon</h2>
+                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                        <p class="card-corner-tag">
+                            Ukens deal
+                        </p>
+                        <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with stunning cliffs">
+                        <ul>
+                            <li><h3>Greske favoritter</h3></li>
+                            <li>
+                                Akkurat nå får du 1000,- i rabatt per bestilling til bl.a. Parga, Sivota, Lefkas, Korfu og
+                                Kalamata i Hellas. Gjelder avreiser i sommer 2025. Kampanjen er gyldig i perioden 
+                                3/1 - 12/1-2025. Bruk rabattkoden WEEKDEAL ved bestilling.
+                            </li>
+                            <li><a href="#">Fra kr 3 970 <i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
                     </article>
-                </nav>
-                <article id="scroll-indicator">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </article>
-                <form name="travel-from">
-                    <label>Fra</label>
-                    <select>
-                        <option value="Oslo Lufthavn">Oslo Lufthavn</option>
-                        <option value="Torp Sandefjord Lufthavn">Torp Sandefjord Lufthavn</option>
-                        <option value="Bergen Lufthavn">Bergen Lufthavn</option>
-                        <option value="Alta Lufthavn">Alta Lufthavn</option>
-                    </select>
-                </form>
-                <form name="travel-to">
-                    <label>Til</label>
-                    <select>
-                        <option value="Albania">Albania</option>
-                        <option value="Danmark">Danmark</option>
-                        <option value="Finland">Finland</option>
-                        <option value="Hellas">Hellas</option>
-                    </select>
-                </form>
-                <form name="timeframe">
-                    <label>Reiselengde</label>
-                    <select>
-                        <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
-                        <option value="1 uke">1 uke</option>
-                        <option value="2 uker">2 uker</option>
-                        <option value="Mer enn 2 uker">Mer enn 2 uker</option>
-                    </select>
-                </form>
-                <form name="choose-date">
-                    <label>Velg dato</label>
-                    <input type="date" name="velg-dato">
-                </form>
-                <form name="travelers-amount">
-                    <label>Antall reisende</label>
-                    <input type="number" min="1">
-                </form>
-                <button name="search-button">Søk</button>
-            </header>
-            <main>
+                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                        <img src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
+                        <ul>
+                            <li><h3>Solskinnspriser - bestill i dag!</h3></li>
+                            <li>
+                                Spar opptil 45%. Akkurat nå tilbyr vi billige vinterreiser til mange reisemål. Bestill
+                                vinterens herligste uke i dag!
+                            </li>
+                            <li><a href="#">Fra kr 3 200 <i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                    </article>
+                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                        <img src="../Reisebyraa_Nettsted/images/cathedral-427997_640.jpg" alt="Picture of La Sagrada Familia, Barcelona, Spain">
+                        <ul>
+                            <li><h3>Storbyferie</h3></li>
+                            <li>
+                                Bestill en langhelg og unn deg en flott weekendreise i en storby der du selv velger
+                                reiselengde, fly og nøye utvalgte hotell.
+                            </li>
+                            <li><a href="#">Les mer <i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                    </article>
+                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                        <img src="../Reisebyraa_Nettsted/images/building-7014904_640.jpg" alt="Picture of Tower Bridge, London, England, United Kingdom">
+                        <ul>
+                            <li><h3>Besøk påskefavoritten London</h3></li>
+                            <li>
+                                London er en av de mest populære reisemålene i påsken, kjent for sin unike blanding
+                                av historie, kultur og moderne opplevelser.
+                            </li>
+                            <li><a href="#">Fra 2 150,- <i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                    </article>
+                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                        <p class="card-corner-tag">
+                            Nyhet
+                        </p>
+                        <img src="../Reisebyraa_Nettsted/images/ski-slope-3223709_640.jpg" alt="Picture of ski slope with skiier and gondolas">
+                        <ul>
+                            <li><h3>Skiferie</h3></li>
+                            <li>
+                                Drømmer du om puddersnø, frisk fjelluft og fartsfylte nedfarter? Vinteren er endelig her, og 
+                                det betyr at skisesongen er i full gang!
+                            </li>
+                            <li><a href="#">Se alle skistedene <i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                    </article>
+                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                        <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                        <ul>
+                            <li><h3>Spar opptil 7000,- til sommer</h3></li>
+                            <li>
+                                Drømmer du om solfylte dager og eksotiske opplevelser? Nå har du sjansen til å sikre deg din
+                                drømmeferie til fantastisk pris!
+                            </li>
+                            <li><a href="#">Les mer <i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                    </article>
+                </section>
             </main>
-            <footer id="global-footer">
+            <aside><!----------------------------------------------- grid-area: aside; (desktop) ------------------------------------------>
+            </aside>
+            <footer id="global-footer"><!--------------------------- grid-area: footer; (desktop) ----------------------------------------->
                 <section id="flags">
                     <p><img src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">Sverige</p>
                     <p><img src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">Danmark</p>
@@ -173,8 +281,6 @@
                     </ul>
                 </section>
             </footer>
-            <aside>
-            </aside>
         </div>
     </body>
 </html>
