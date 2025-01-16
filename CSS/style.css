@@ -15,7 +15,6 @@ html {
     max-width: 1400px;
     font-family: "Montserrat", serif;
     font-style: normal;
-    scroll-behavior: smooth;
 }
 
 * {
@@ -24,22 +23,13 @@ html {
     margin: 0;
 }
 
-/* -- ANIMATIONS, CONDITIONS & EFFECTS -------------------------------------------------------------- */
-#hamburger-menu {
 
-}
-.hamburger-link {
-    display: none;
-}
-#hamburger-button {
-
-}
 
 
 /* -- MOBILE ---------------------------------------------------------------------------- */
 
 /* -- BODY START -- */
-#grid-container-body {
+#grid-container {
     display: grid;
     grid-template-areas: 
     "header"
@@ -48,7 +38,7 @@ html {
 }
 
 /* -- HEADER START -- */
-#global-header-grid-container {
+#grid-container-header {
     grid-area: header;
     display: grid;
     grid-template-areas: 
@@ -60,7 +50,7 @@ html {
 
 
 /* GRID: HEADER-1 */
-#global-header-top-nav-container {
+#header-top-nav-container {
     grid-area: header-1;
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +61,31 @@ html {
     width: 60px;
     margin: 0.5rem;
 }
+#top-nav-icons-container ul {
+    list-style: none;
+}
+#user-links-wrapper {
+
+}
+/* Hamburger meny */
+#hamburger-menu-wrapper {
+
+}
+#hamburger-button {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 2rem;
+    color: var(--custom4);
+    padding-left: 1rem;
+}
+#hamburger-menu-wrapper ul li {
+    list-style: none;
+}
+.hamburger-link {
+    display: none;
+}
+#hamburger-button {
+
+}
 .top-nav-icons {
     font-size: 2rem;
     color: var(--custom4);
@@ -79,12 +94,7 @@ html {
 #search-bar {
     display: none;
 }
-#hamburger-button {
-    background-color: rgba(255, 255, 255, 0);
-    font-size: 2rem;
-    color: var(--custom4);
-    padding-left: 1rem;
-}
+
 .top-nav-user-links {
     display: none;
 }
@@ -95,37 +105,54 @@ html {
     margin: 0.5rem;
 }
 #banner-img {
-    grid-area: header-1;
     max-width: 100%;
     height: auto;
 }
 
 
 /* GRID: HEADER-2 */
-#global-header-form-container {
+#header-travelform-container {
     grid-area: header-2;
     background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     border: 2px solid greenyellow;
 }
-#global-header-form-container #scroll-menu-container{
+
+/* Horizontal menu */
+#scroll-menu-container {
     display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
     gap: 1rem;
-    overflow: scroll;
-    border: 2px solid red;
+    padding: 1rem;
 }
-#global-header-form-container #scroll-menu-container article a{
-    position: relative;
-    display: inline-block;
-    
-}
-#scroll-menu-item {
-    
+
+.scroll-menu-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 150px;
+    text-align: center;
     border: 2px dotted blue;
 }
 
+
+#scroll-menu-container ul li {
+    list-style: none;
+    text-decoration: none;
+    color: var(--custom4);
+    
+}
+
+#scroll-menu-container ul li a i {
+    color: var(--custom4);
+    padding-right: 1rem;
+}
+#scroll-indicator{
+    position: relative;
+    
+ 
+}
 /* 
 display: flex;
 flex-direction: row;
@@ -163,6 +190,12 @@ footer {
     background-color: var(--custom4);
     font-size: 0.7rem;
 }
+
+#global-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 footer h3 {
     font-weight: 800;
 }
@@ -170,7 +203,7 @@ footer, p h3 {
     color: var(--custom7);
 }
 
-/* Kundeservice */
+/* Customer service */
 #customer-service {
     padding-bottom: 2rem;
 }
@@ -199,7 +232,7 @@ footer, p h3 {
     margin-left: 1.2rem;
 }
 
-/* Betalingsmetoder */
+/* Payment options */
 #payment-options {
     padding-top: 2rem;
 }
@@ -217,6 +250,7 @@ footer, p h3 {
     font-size: 2rem;
 }
 
+/* Wrapper */
 #footer-news-and-customerservice-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -224,6 +258,7 @@ footer, p h3 {
     padding-top: 2rem;
 }
 
+/* News and offers */
 #news-and-offers {
     margin-right: 0.5rem;
     padding-bottom: 2rem;
@@ -305,11 +340,11 @@ footer, p h3 {
     #search-bar {
         display: block;
     }
-    .hamburger-link {
-        display: block;
+    .top-nav-user-links {
+        display: inline;
         color: var(--custom4);
     }
-    #user-links p {
+    #top-nav-icons-container {
         display: block;
         color: var(--custom4);
     }

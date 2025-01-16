@@ -12,94 +12,115 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="grid-container-body">
-            <header id="global-header-grid-container">
+        <div id="grid-container">
+            <header id="grid-container-header">
                 <section id="global-header-top-nav-container">
                     <a href="index.html">
                         <img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
-                    </a>
-                    <section id="top-nav-icons-container">
-                        <form>
-                            <input id="search-bar" type="text" placeholder="Søk her">
-                            <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        </form>
-                        <nav>
-                            <a href="#" class="top-nav-user-links">Opprett en konto</a>
-                            <a href="#" class="top-nav-icons"><i class="fa-regular fa-user"></i></a>
-                            <a href="#" class="top-nav-user-links">Min side</a>
-                        </nav>
-                        <nav id="hamburger-menu">
-                            <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
-                            <a href="#" class="top-nav-user-links">Tips og inspirasjon</a>
-                            <a href="hotell.html" class="top-nav-user-links">Hotell</a>
-                            <a href="https://www.norwegian.no" class="top-nav-user-links" target="_blank">Fly</a>
-                            <a href="#" class="top-nav-user-links">Kontakt</a>
-                        </nav>
-                    </section>
+                    </a>    
+                    <nav id="top-nav-icons-container">
+                        <ul id="search-bar-wrapper">
+                            <li>
+                                <form>
+                                    <input id="search-bar" type="text" placeholder="Søk her">
+                                    <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                </form>
+                            </li>
+                        </ul>
+                        <ul id="user-links-wrapper">
+                            <li>
+                                <a href="#" class="top-nav-user-links">Opprett en konto</a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-nav-icons"><i class="fa-regular fa-user"></i><span>Min side</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-nav-user-links">Min side</a>
+                            </li>
+                        </ul>
+                        <ul id="hamburger-menu-wrapper">
+                            <li>
+                                <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-nav-user-links">Tips og inspirasjon</a>
+                            </li>
+                            <li>
+                                <a href="hotell.html" class="top-nav-user-links">Hotell</a>
+                            </li>
+                            <li>
+                                <a href="https://www.norwegian.no" class="top-nav-user-links" target="_blank">Fly</a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-nav-user-links">Kontakt</a>
+                            </li>
+                        </ul>
+                    </nav>
                     <img id="banner-img" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
                 </section>
             </header>
-            <header>
-                <section id="global-header-form-container">
-                    <nav id="scroll-menu-container">
-                        <article class="scroll-menu-item">
-                            <a href="#"><i class="fa-solid fa-suitcase"></i></a>
-                            <p>Fly + Hotell</p>
-                        </article>
-                        <article class="scroll-menu-item">
-                            <a href="#"><i class="fa-solid fa-plane"></i></a>
-                            <p>Fly</p>
-                        </article>
-                        <article class="scroll-menu-item">
-                            <a href="#"><i class="fa-solid fa-city"></i></a>
-                            <p>Storby</p>
-                        </article>
-                        <article class="scroll-menu-item">
-                            <a href="#"><i class="fa-solid fa-person-skiing"></i></a>
-                            <p>Ski</p>
-                        </article>
-                        <article class="scroll-menu-item">
-                            <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
-                            <p>Kombinasjonsreiser</p>
-                        </article>
-                    </nav>
-                    <form name="travel-from">
-                        <label>Fra</label>
-                        <select>
-                            <option value="Oslo Lufthavn">Oslo Lufthavn</option>
-                            <option value="Torp Sandefjord Lufthavn">Torp Sandefjord Lufthavn</option>
-                            <option value="Bergen Lufthavn">Bergen Lufthavn</option>
-                            <option value="Alta Lufthavn">Alta Lufthavn</option>
-                        </select>
-                    </form>
-                    <form name="travel-to">
-                        <label>Til</label>
-                        <select>
-                            <option value="Albania">Albania</option>
-                            <option value="Danmark">Danmark</option>
-                            <option value="Finland">Finland</option>
-                            <option value="Hellas">Hellas</option>
-                        </select>
-                    </form>
-                    <form name="timeframe">
-                        <label>Reiselengde</label>
-                        <select>
-                            <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
-                            <option value="1 uke">1 uke</option>
-                            <option value="2 uker">2 uker</option>
-                            <option value="Mer enn 2 uker">Mer enn 2 uker</option>
-                        </select>
-                    </form>
-                    <form name="choose-date">
-                        <label>Velg dato</label>
-                        <input type="date" name="velg-dato">
-                    </form>
-                    <form name="travelers-amount">
-                        <label>Antall reisende</label>
-                        <input type="number" min="1">
-                    </form>
-                    <button name="search-button">Søk</button>
-                </section>
+            <header id="header-travelform-container">
+                <nav id="scroll-menu-container">
+                    <article class="scroll-menu-item">
+                        <a href="#"><i class="fa-solid fa-suitcase"></i></a>
+                        <a href="#">Fly + Hotell</a>
+                    </article>
+                    <article class="scroll-menu-item">
+                        <a href="#"><i class="fa-solid fa-plane"></i></a>
+                        <a href="#">Fly</a>
+                    </article>
+                    <article class="scroll-menu-item">
+                        <a href="#"><i class="fa-solid fa-city"></i></a>
+                        <a href="#">Storby</a>
+                    </article>
+                    <article class="scroll-menu-item">
+                        <a href="#"><i class="fa-solid fa-person-skiing"></i></a>
+                        <a href="#">Ski</a>
+                    </article>
+                    <article class="scroll-menu-item">
+                        <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+                        <a href="#">Kombinasjonsreiser</a>
+                    </article>
+                </nav>
+                <article id="scroll-indicator">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </article>
+                <form name="travel-from">
+                    <label>Fra</label>
+                    <select>
+                        <option value="Oslo Lufthavn">Oslo Lufthavn</option>
+                        <option value="Torp Sandefjord Lufthavn">Torp Sandefjord Lufthavn</option>
+                        <option value="Bergen Lufthavn">Bergen Lufthavn</option>
+                        <option value="Alta Lufthavn">Alta Lufthavn</option>
+                    </select>
+                </form>
+                <form name="travel-to">
+                    <label>Til</label>
+                    <select>
+                        <option value="Albania">Albania</option>
+                        <option value="Danmark">Danmark</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Hellas">Hellas</option>
+                    </select>
+                </form>
+                <form name="timeframe">
+                    <label>Reiselengde</label>
+                    <select>
+                        <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
+                        <option value="1 uke">1 uke</option>
+                        <option value="2 uker">2 uker</option>
+                        <option value="Mer enn 2 uker">Mer enn 2 uker</option>
+                    </select>
+                </form>
+                <form name="choose-date">
+                    <label>Velg dato</label>
+                    <input type="date" name="velg-dato">
+                </form>
+                <form name="travelers-amount">
+                    <label>Antall reisende</label>
+                    <input type="number" min="1">
+                </form>
+                <button name="search-button">Søk</button>
             </header>
             <main>
             </main>
