@@ -1,26 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hotell</title>
         <link rel="stylesheet" href="../Reisebyraa_Nettsted/CSS/style.css">
         <link rel="stylesheet" href="../Reisebyraa_Nettsted/fonts/fontawesome-free-6.7.2-web/css/all.css">
+        <!--Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="grid-container-body">
-            <header id="global-header">
-                <img rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo">
+        <div id="primary-grid-container">
+            <header id="global-header-flex-container"><!------------------ grid-area: header; (desktop) --------------------------------------->
+                <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>    
+                <nav>
+                    <ul id="search-bar-wrapper">
+                        <li>
+                            <form>
+                                <input id="search-bar" type="text" placeholder="Søk her">
+                                <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul id="buttons-wrapper">
+                        <li>
+                            <a href="#" class="top-nav-user-links">Opprett en konto</a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-icons"><i class="fa-regular fa-user"></i><span>Min side</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-user-links">Min side</a>
+                        </li>
+                    </ul>
+                    <ul id="hamburger-wrapper">
+                        <li>
+                            <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-user-links">Tips og inspirasjon</a>
+                        </li>
+                        <li>
+                            <a href="hotell.html" class="top-nav-user-links">Hotell</a>
+                        </li>
+                        <li>
+                            <a href="https://www.norwegian.no" class="top-nav-user-links" target="_blank">Fly</a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-user-links">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
-            <main>
-                <h1>Hotell</h1>
+            <header id="gallery">
+                <nav id="gallery-button-grid-container"> <!-- (grid-container )-->
+                    <section id="heart-button">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </section>
+                    <section id="arrow-buttons">
+                        <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                    </section>
+                    <section id="gallery-indicator">
+                        <a href="#"><i class="fa-solid fa-images"> 49</i></a>
+                    </section>
+                </nav>
+                <section id="gallery-scroll-container">
+                    <article class="gallery-card"> <!-- Flex-box / Flex item -->
+                        <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Picture of a resort pool by the ocean">
+                    </article>
+                    <article class="gallery-card">
+                        <img src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
+                    </article>
+                    <article class="gallery-card">
+                        <img src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
+                    </article>
+                    <article class="gallery-card">
+                        <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    </article>
+                    <article class="gallery-card">
+                        <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with stunning cliffs">
+                    </article>
+                    <article class="gallery-card">
+                        <img src="../Reisebyraa_Nettsted/images/holiday-2733322_1280.jpg" alt="Picture of a woman in an oceanside pool">
+                    </article>
+                </section>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Oversikt</a>
+                        </li>
+                        <li>
+                            <a href="#">Fasiliteter</a>
+                        </li>
+                        <li>
+                            <a href="#">Rom</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section><!-- Oversikt: -->
+                <h2>Parga Beach</h2>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-sun"></i>
+                    </li>
+                </ul>
+                <article>
+                    <ul>
+                        <li id="parga-beach-score">
+                            8.9
+                        </li>
+                        <li id="parga-beach-score-designation">
+                            Fantastisk
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section><!-- Fasiliteter: -->
+                <article>
+                    <h2>Fasiliteter</h2>
+                    <p>Parga beach tilbyr et tilsynelatende uutømmelig utvalg av sport og aktiviteter og lokker til seg så vel
+                        eliteutøvere som aktive familier og hverdagsmosjonister - i alle aldre og på alle nivåer.</p>
+                </article>
+                <section id="facility-icons">
+                    <ul>
+                        <li>
+                            <p><i class="fa-solid fa-paw"></i> Kjæledyrvennlig</p>
+                        </li>
+                        <li>
+                            <p><i class="fa-solid fa-mug-hot"></i> Frokost</p>
+                        </li>
+                        <li>
+                            <p><i class="fa-solid fa-spa"></i> Spa</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p><i class="fa-solid fa-bell-concierge"></i> Romservice</p>
+                        </li>
+                        <li>
+                            <p><i class="fa-solid fa-martini-glass"></i> Bar</p>
+                        </li>
+                        <li>
+                            <p><i class="fa-solid fa-dumbbell"></i> Treningssenter</p>
+                        </li>
+                    </ul>
+                </section>
+                <a href="#">Se alle eiendomsfasiliteter <i class="fa-solid fa-chevron-right"></i></a>
+            </section>
+            <section><!-- Kart: -->
+                <h2>Utforsk området</h2>
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+                <script>
+                function myMap() {
+                var mapProp= {
+                center:new google.maps.LatLng(39.28566942598636, 20.388666279878848),
+                zoom:16,
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+            </section>
+            <section><!-- Tilgjengelige rom: -->
+                
+            </section>
+            <main><!-------------------------------------------------- grid-area: main; (desktop) ----------------------------------------->
+                <section>
+               
+                </section>
             </main>
-            <footer>
-                <h1>test</h1>
-            </footer>
-            <aside>
-                <h1>test</h1>
+            <aside><!----------------------------------------------- grid-area: aside; (desktop) ------------------------------------------>
             </aside>
+            <footer id="global-footer"><!--------------------------- grid-area: footer; (desktop) ----------------------------------------->
+                <section id="flags">
+                    <p><img src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">Sverige</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">Danmark</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">Norge</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">Finland</p>
+                    <p><img src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">Nederland</p>
+                </section>
+                <section id="payment-options">
+                    <h3>BETALINGSMETODER</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-cc-visa"></i></li>
+                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                        <li><i class="fa-brands fa-cc-paypal"></i></li>
+                        <li><i class="fa-brands fa-cc-apple-pay"></i></li>
+                        <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
+                    </ul>
+                </section>
+                <section id="footer-news-and-customerservice-wrapper">
+                    <nav id="news-and-offers">
+                        <h3>NYHETER & TILBUD</h3>
+                        <p id="news-and-offers-overlaytext">Meld deg på nyhetsbrev her</p>
+                        <form>
+                            <input type="text" placeholder="ola@example.com...">
+                            <button>Send</button>
+                        </form>
+                        <a href="#">Kjøp reisegavekort</a>
+                    </nav>
+                    <nav id="customer-service">
+                        <h3>KUNDESERVICE</h3>
+                        <ul>
+                            <li><a class="customer-service-link" href="#">Spørsmål og svar</a></li>
+                            <li><a class="customer-service-link" href="#">Chat</a></li>
+                            <li><a class="customer-service-link" href="#">Kontakt</a></li>
+                            <li><a class="customer-service-link" href="#">Tilgjengelighets-erklæring</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section id="social-media">
+                    <h3>SOSIALE MEDIER</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://no.pinterest.com/#top"><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href="https://www.tiktok.com/explore"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </section>
+            </footer>
         </div>
     </body>
 </html>

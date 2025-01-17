@@ -38,9 +38,16 @@ og jeg forventer derfor at det kommer til å føles relativt nytt igjen.
 
 ---- Kilder: ----
 
+APA 7th!
+
+
 For å midtstille flaggene med teksten brukte jeg 'vertical-allign: middle;' fra w3schools.
 https://www.w3schools.com/cssref/pr_pos_vertical-align.php
 
+
+
+Google maps HTML + script:
+https://www.w3schools.com/graphics/google_maps_intro.asp
 
 
 
