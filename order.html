@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Order</title>
+        <title>Bestilling</title>
         <link rel="stylesheet" href="../Reisebyraa_Nettsted/CSS/style.css">
         <link rel="stylesheet" href="../Reisebyraa_Nettsted/fonts/fontawesome-free-6.7.2-web/css/all.css">
         <!--Font: -->
@@ -12,10 +12,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="global-header-flex-container"><!-- grid-area: header; (desktop) -->
+        <header id="top-nav-grid-container">
             <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>    
-            <nav>
-                <ul id="buttons-wrapper">
+            <nav id="buttons-wrapper">
+                <ul>
                     <li id="search-wrapper">
                         <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </li>
@@ -23,15 +23,17 @@
                         <a href="#">Opprett en konto</a>
                     </li>
                     <li id="my-page-wrapper">
-                        <a href="#"><i class="fa-regular fa-user"></i> Min side</a>
+                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i> <span id="my-page-text">Min side</span></a>
                     </li>
                 </ul>
-                <ul id="hamburger-wrapper">
+            </nav>
+            <nav id="hamburger-wrapper">
+                <ul>
                     <li>
-                        <a href="#" id="hamburger-button"><i class="fa-solid fa-bars"></i></a>
+                        <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
                     </li>
                     <li>
-                        <a href="#" class="top-nav-user-links">Tips og inspirasjon</a>
+                        <a href="#tips-and-inspiration" class="top-nav-user-links">Tips og inspirasjon</a>
                     </li>
                     <li>
                         <a href="hotell.html" class="top-nav-user-links">Hotell</a>
@@ -40,22 +42,72 @@
                         <a href="https://www.norwegian.no/" class="top-nav-user-links" target="_blank">Fly</a>
                     </li>
                     <li>
-                        <a href="#" class="top-nav-user-links">Kontakt</a>
+                        <a href="#global-footer" class="top-nav-user-links">Kontakt</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <nav><!-- Navigering: -->
+            <section id="overview-section"><!-- Oversiktsseksjon: -->
+                <details>
+                    <summary>Dine valg <i class="fa-solid fa-chevron-right"></i></summary>
+                    <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Picture of a resort pool by the ocean">
+                    <h4>Parga Beach</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-sun"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-sun"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-sun"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-sun"></i>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-sun"></i>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i> Hellas, Parga
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-calendar"></i> Man 5 mai - man 12 mai 2025
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-user"></i> 2 Voksne
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bed"></i> Deluxerom, Balkong og ikke spesifisert utsikt
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-utensils"></i> Frokostbuffé
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-plane-departure"></i> Oslo Lufthavn &mdash; Prevenza
+                        </li>
+                        <li>
+                            <s>22 003,-</s>
+                        </li>
+                        <li>
+                            <b>19 803,-</b>
+                        </li>
+                    </ul>
+                </details>
+            </section>
+            <nav id="order-navigation"><!-- Navigering: -->
                 <ul id="order-nav-scroll-container">
                     <li>
-                        <a href="#">Søk <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="index.html#search-form">Søk <i class="fa-solid fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Søkeresultater <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="hotell.html">Søkeresultater <i class="fa-solid fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#">Romtype <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="hotell.html#parga-beach-available-rooms">Romtype <i class="fa-solid fa-chevron-right"></i></a>
                     </li>
                     <li>
                         <a href="https://www.norwegian.no/" target="_blank">Fly <i class="fa-solid fa-chevron-right"></i></a>
@@ -64,14 +116,14 @@
                         <a href="#">Tillegg <i class="fa-solid fa-chevron-right"></i></a>
                     </li>
                     <li>
-                        <a href="#"><b>OPPLYSNINGER <i class="fa-solid fa-chevron-right"></i></b></a>
+                        <a href="#order-form"><b>OPPLYSNINGER <i class="fa-solid fa-chevron-right"></i></b></a>
                     </li>
                     <li>
-                        <a href="#">Bestill</a>
+                        <a href="#order-form-submit">Bestill</a>
                     </li>
                 </ul>
             </nav>
-            <section><!-- Bestillingsskjema: -->
+            <section id="order-form"><!-- Bestillingsskjema: -->
                 <form>
                     <fieldset>
                         <legend>VOKSEN 18+ HOVEDBESTILLER</legend>
@@ -164,12 +216,61 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <a href="#">Siste trinn <i class="fa-solid fa-arrow-right"></i></a>
+                    <input type="submit" id="#order-form-submit" value="Siste trinn"><i class="fa-solid fa-arrow-right"></i>
                 </form>
             </section>
-            <section><!-- Oversiktsseksjon: -->
-
-            </section>
         </main>
+        <aside>
+
+        </aside>
+        <footer id="global-footer"><!-- grid-area: footer; (desktop) -->
+            <section id="flags">
+                <p><img src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">Sverige</p>
+                <p><img src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">Danmark</p>
+                <p><img src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">Norge</p>
+                <p><img src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">Finland</p>
+                <p><img src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">Nederland</p>
+            </section>
+            <section id="payment-options">
+                <h3>BETALINGSMETODER</h3>
+                <ul>
+                    <li><i class="fa-brands fa-cc-visa"></i></li>
+                    <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                    <li><i class="fa-brands fa-cc-paypal"></i></li>
+                    <li><i class="fa-brands fa-cc-apple-pay"></i></li>
+                    <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
+                </ul>
+            </section>
+            <section id="footer-news-and-customerservice-wrapper">
+                <nav id="news-and-offers">
+                    <h3>NYHETER & TILBUD</h3>
+                    <p id="news-and-offers-overlaytext">Meld deg på nyhetsbrev her</p>
+                    <form>
+                        <input type="text" placeholder="ola@example.com...">
+                        <input type="submit" value="Send">
+                    </form>
+                    <a href="#">Kjøp reisegavekort</a>
+                </nav>
+                <nav id="customer-service">
+                    <h3>KUNDESERVICE</h3>
+                    <ul>
+                        <li><a class="customer-service-link" href="#">Spørsmål og svar</a></li>
+                        <li><a class="customer-service-link" href="#">Chat</a></li>
+                        <li><a class="customer-service-link" href="#">Kontakt</a></li>
+                        <li><a class="customer-service-link" href="#">Tilgjengelighets-erklæring</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="social-media">
+                <h3>SOSIALE MEDIER</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://no.pinterest.com/#top"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a href="https://www.tiktok.com/explore"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </section>
+        </footer>
     </body>
 </html>

@@ -50,6 +50,8 @@ Google maps HTML + script:
 https://www.w3schools.com/graphics/google_maps_intro.asp
 
 
-
+Lang bindestrek med koden:
+&mdash;
+Hentet fra: https://www.lib.ncsu.edu/web-style-guide/writing-for-the-web/en-and-em-dashes
 
 ---- AI prompts (hvis relevant): ----

@@ -1,27 +1,86 @@
 /* -- GENERAL -- */
 /* Main colours */
 :root {
---custom1: #52d3f0;
---custom2: #ffcf40;
---custom3: #1ca2c1;
---custom4: #252525;
---custom5: #e8e8e8;
---custom6: #019101;
---custom7: #f6f5f2;
+
+--custom-lightblue: #52d3f0;
+--custom-blue: #1ca2c1;
+--custom-darkblue: #027792;
+
+--custom-offwhite: #f6f5f2;
+--custom-lightgrey: #e8e8e8;
+--custom-darkgrey: #252525;
+
+--custom-yellow: #ffcf40;
+--custom-green: #019101;
+
+
 }
 
 /* General web-site values */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html {
     max-width: 1400px;
     font-family: "Montserrat", serif;
     font-style: normal;
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+body{
+    display: grid;
+    grid-template-areas:
+        "top-nav"
+        "header"
+        "main"
+        "footer";
 }
+
+
+/* TOP NAV */
+#top-nav-grid-container{
+    grid-area: top-nav;
+
+    display: grid;
+    
+}
+
+/* INDEX.HTML HEADER */
+#header-search-form-grid-container{
+    grid-area: header;
+}
+
+#banner img{
+    display: flex;
+    width: 100%;
+}
+/* MAIN */
+main{
+    grid-area: main;
+}
+
+/* FOOTER */
+footer{
+    grid-area: footer;
+}
+
+/* GLOBAL HEADER, TOP NAV */
+
+#global-header-flex-container{
+
+}
+
+
+/* index.html HEADER FORM */
+#header-search-form-grid-container{
+
+}
+
+
+
+
 
 /* TEST:
 #global-header-form-container {
