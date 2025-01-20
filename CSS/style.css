@@ -40,19 +40,62 @@ body{
 
 
 /* TOP NAV */
-#top-nav-grid-container{
+#top-nav-flex-container{
     grid-area: top-nav;
+    display: flex;
+    justify-content: space-between;
 
-    display: grid;
-    
+    nav ul{
+        list-style: none;
+
+        li a{
+            text-decoration: none;
+        }
+    }
+    #logo{
+        width: 5rem;
+        height: 5rem;
+        align-items: center;
+    }
+    #buttons-wrapper{
+        display: flex;
+    }
+    #buttons-wrapper ul{
+        display: flex;
+        align-items: center;
+    }
+    .top-nav-user-links{
+        display: none;
+    }
+    .top-nav-icons{
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    #hamburger-button{
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: #ffffff00;
+        border:#ffffff00;
+    }
 }
 
-/* INDEX.HTML HEADER */
+/* HEADER 2 (index.html) */
 #header-search-form-grid-container{
     grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+
+    #banner-section{
+        grid-area: 1 3;
+    }
+    #search-form-section{
+        grid-area: 2 4;
+    }
 }
 
-#banner img{
+#banner{
     display: flex;
     width: 100%;
 }
@@ -60,23 +103,27 @@ body{
 main{
     grid-area: main;
 }
+.inspiration-card-image{
+    display: flex;
+    width: 100%;
+}
 
 /* FOOTER */
 footer{
     grid-area: footer;
 }
+.flag-image{
+    display: flex;
+    max-width: 100%;
+}
 
 /* GLOBAL HEADER, TOP NAV */
 
-#global-header-flex-container{
 
-}
 
 
 /* index.html HEADER FORM */
-#header-search-form-grid-container{
 
-}
 
 
 

@@ -12,26 +12,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="top-nav-grid-container">
-            <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>    
+        <header id="top-nav-flex-container">
+            <figure id="logo-wrapper">
+                <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>
+            </figure>
             <nav id="buttons-wrapper">
                 <ul>
                     <li id="search-wrapper">
                         <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                    <li id="new-user-wrapper">
-                        <a href="#">Opprett en konto</a>
+                        <a href="#" class=top-nav-user-links>Opprett en konto</a>
                     </li>
                     <li id="my-page-wrapper">
-                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i> <span id="my-page-text">Min side</span></a>
+                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i></a>
+                        <a href="#" class="top-nav-user-links">Min side</a>
                     </li>
-                </ul>
-            </nav>
-            <nav id="hamburger-wrapper">
-                <ul>
                     <li>
                         <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
                     </li>
+                </ul>
+                <ul id="hamburger-list">
                     <li>
                         <a href="#tips-and-inspiration" class="top-nav-user-links">Tips og inspirasjon</a>
                     </li>

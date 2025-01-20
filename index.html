@@ -12,26 +12,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="top-nav-grid-container">
-            <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>    
+        <header id="top-nav-flex-container">
+            <figure id="logo-wrapper">
+                <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>
+            </figure>
             <nav id="buttons-wrapper">
                 <ul>
                     <li id="search-wrapper">
                         <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                    <li id="new-user-wrapper">
-                        <a href="#">Opprett en konto</a>
+                        <a href="#" class=top-nav-user-links>Opprett en konto</a>
                     </li>
                     <li id="my-page-wrapper">
-                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i> <span id="my-page-text">Min side</span></a>
+                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i></a>
+                        <a href="#" class="top-nav-user-links">Min side</a>
                     </li>
-                </ul>
-            </nav>
-            <nav id="hamburger-wrapper">
-                <ul>
                     <li>
                         <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
                     </li>
+                </ul>
+                <ul id="hamburger-list">
                     <li>
                         <a href="#tips-and-inspiration" class="top-nav-user-links">Tips og inspirasjon</a>
                     </li>
@@ -48,10 +47,10 @@
             </nav>
         </header>
         <header id="header-search-form-grid-container">
-            <section id="banner"> <!-- grid-area: 1/3 -->
-                <img src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
+            <section id="banner-section"> <!-- grid-area: 1/3 -->
+                <img id="banner" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
             </section>
-            <section id="search-form"> <!-- grid-area: 2/4 -->
+            <section id="search-form-section"> <!-- grid-area: 2/4 -->
                 <nav id="form-scroll-container">
                     <ul>
                         <li class="scroll-menu-item">
@@ -169,7 +168,7 @@
                     <p class="card-corner-tag">
                         Ukens deal
                     </p>
-                    <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with surrounding cliffs">
+                    <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with surrounding cliffs">
                     <ul>
                         <li>
                             <h3>Greske favoritter</h3>
@@ -185,7 +184,7 @@
                     </ul>
                 </article>
                 <article class="inspiration-card"> <!-- Flex-box / Flex item -->
-                    <img src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
+                    <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
                     <ul>
                         <li>
                             <h3>Solskinnspriser - bestill i dag!</h3>
@@ -200,7 +199,7 @@
                     </ul>
                 </article>
                 <article class="inspiration-card"> <!-- Flex-box / Flex item -->
-                    <img src="../Reisebyraa_Nettsted/images/cathedral-427997_640.jpg" alt="Picture of La Sagrada Familia, Barcelona, Spain">
+                    <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/cathedral-427997_640.jpg" alt="Picture of La Sagrada Familia, Barcelona, Spain">
                     <ul>
                         <li>
                             <h3>Storbyferie</h3>
@@ -215,7 +214,7 @@
                     </ul>
                 </article>
                 <article class="inspiration-card"> <!-- Flex-box / Flex item -->
-                    <img src="../Reisebyraa_Nettsted/images/building-7014904_640.jpg" alt="Picture of Tower Bridge, London, England, United Kingdom">
+                    <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/building-7014904_640.jpg" alt="Picture of Tower Bridge, London, England, United Kingdom">
                     <ul>
                         <li>
                             <h3>Besøk påskefavoritten London</h3>
@@ -233,7 +232,7 @@
                     <p class="card-corner-tag">
                         Nyhet
                     </p>
-                    <img src="../Reisebyraa_Nettsted/images/ski-slope-3223709_640.jpg" alt="Picture of ski slope with skiier and gondolas">
+                    <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/ski-slope-3223709_640.jpg" alt="Picture of ski slope with skiier and gondolas">
                     <ul>
                         <li>
                             <h3>Skiferie</h3>
@@ -248,7 +247,7 @@
                     </ul>
                 </article>
                 <article class="inspiration-card"> <!-- Flex-box / Flex item -->
-                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
                     <ul>
                         <li>
                             <h3>Spar opptil 7000,- til sommer</h3>
@@ -269,11 +268,11 @@
         </aside>
         <footer id="global-footer"><!-- grid-area: footer; (desktop) -->
             <section id="flags">
-                <p><img src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">Sverige</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">Danmark</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">Norge</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">Finland</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">Nederland</p>
+                <p><img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">Sverige</p>
+                <p><img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">Danmark</p>
+                <p><img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">Norge</p>
+                <p><img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">Finland</p>
+                <p><img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">Nederland</p>
             </section>
             <section id="payment-options">
                 <h3>BETALINGSMETODER</h3>
