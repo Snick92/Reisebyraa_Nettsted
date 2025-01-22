@@ -74,7 +74,7 @@
                     </ul>
                 </nav>
                 <form name="travel-form">
-                    <fieldset>
+                    <fieldset class="form-item">
                         <legend>Fra</legend>
                         <select name="origin">
                             <option value="Oslo Lufthavn">Oslo Lufthavn</option>
@@ -83,7 +83,7 @@
                             <option value="Alta Lufthavn">Alta Lufthavn</option>
                         </select>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="form-item">
                         <legend>Til</legend>
                         <select name="destination">
                             <option value="Albania">Albania</option>
@@ -92,7 +92,7 @@
                             <option value="Hellas">Hellas</option>
                         </select>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="form-item">
                         <legend>Reiselengde</legend>
                         <select name="stay-duration">
                             <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
@@ -101,15 +101,15 @@
                             <option value="Mer enn 2 uker">Mer enn 2 uker</option>
                         </select>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="form-item">
                         <legend>Velg dato</legend>
                         <input type="date" name="departure-date" required>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="form-item">
                         <legend>Antall reisende</legend>
                         <input type="number" min="1" name="amount-of-travelers" required>
                     </fieldset>
-                    <input type="submit" name="form-button" value="Søk">
+                    <input id="form-submit-button" type="submit" name="form-button" value="Søk">
                 </form>
             </section>
         </header>

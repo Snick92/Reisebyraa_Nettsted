@@ -84,16 +84,66 @@ body{
 #header-search-form-grid-container{
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "section-1"
+    "section-2"
+    "section-3"
+    "section-4"
+    ;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: auto auto auto auto;
+}
+#banner-section{
+    
+    grid-row-start: section-1;
+    grid-row-end: section-3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+#search-form-section{
+    z-index: 2;
+    justify-content: space-evenly;
+    
 
-    #banner-section{
-        grid-area: 1 3;
-    }
-    #search-form-section{
-        grid-area: 2 4;
+    grid-row-start: section-2;
+    grid-row-end: section-4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
+
+    overflow: visible;
+
+    .form-item{
+        margin: 1rem;
+    }    
+}
+#form-scroll-container{
+    display: flex;
+    width: 400px;
+    max-width: 100%;
+    overflow-x: touch;
+    overflow-y: hidden;
+    white-space: nowrap;
+    border: 2px solid red;
+
+    ul{
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    
+        a{
+            text-decoration: none;
+        }
     }
 }
+
 
 #banner{
     display: flex;
