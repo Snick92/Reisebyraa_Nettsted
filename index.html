@@ -92,19 +92,25 @@
                             <option value="Hellas">Hellas</option>
                         </select>
                     </fieldset>
-                    <fieldset class="form-item">
-                        <legend>Reiselengde</legend>
-                        <select name="stay-duration">
-                            <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
-                            <option value="1 uke">1 uke</option>
-                            <option value="2 uker">2 uker</option>
-                            <option value="Mer enn 2 uker">Mer enn 2 uker</option>
-                        </select>
-                    </fieldset>
-                    <fieldset class="form-item">
-                        <legend>Velg dato</legend>
-                        <input type="date" name="departure-date" required>
-                    </fieldset>
+                    <ul>
+                        <li>
+                            <fieldset class="form-item">
+                                <legend>Reiselengde</legend>
+                                <select name="stay-duration">
+                                    <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
+                                    <option value="1 uke">1 uke</option>
+                                    <option value="2 uker">2 uker</option>
+                                    <option value="Mer enn 2 uker">Mer enn 2 uker</option>
+                                </select>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <fieldset class="form-item">
+                                <legend>Velg dato</legend>
+                                <input type="date" name="departure-date" required>
+                            </fieldset>
+                        </li>
+                    </ul>
                     <fieldset class="form-item">
                         <legend>Antall reisende</legend>
                         <input type="number" min="1" name="amount-of-travelers" required>
