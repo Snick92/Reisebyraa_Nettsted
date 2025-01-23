@@ -33,8 +33,13 @@ og jeg forventer derfor at det kommer til å føles relativt nytt igjen.
 
 ---- Tolkninger: ----
 
+Tektstfargen i inputfeltene på forsiden (id="search-form-section") manglet fargebeskrivelse i oppgaven. Jeg brukte derfor Adobe sitt analyse-verktøy (Adobe Color) til å identifisere fargen. Verktøyet ga flere, 
+lyse gråfarger som resultat (med minimale forskjeller). Fellesnevneren for fargene var derimot et dårlig konstrastforhold til bakgrunnsfargen (hvit), som igjen fører til dårligere lesbarhet. 
+Jeg brukte derfor det tilhørende tilgjengelighetsverktøyet til Adobe (som viser en "score" for konstrastforhold mellom farger) til å justere tekstfargen til et mer lesbart nivå,- uten å forhåpentligvis la det 
+gå ut over designet vist i oppgaven.
 
-
+Selve font / tekst-størrelsene var noe vanskelig å tolke da det ikke var gitt noen konkrete beskrivelser i oppgaveteksten - noe som igjen førte til en del prøving og feiling da det eneste utgangspunktet var ren
+gjetting ut ifra eksempelbildene.
 
 ---- Kilder: ----
 

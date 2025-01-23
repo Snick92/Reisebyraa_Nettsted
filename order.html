@@ -224,14 +224,31 @@
         </aside>
         <footer id="global-footer"><!-- grid-area: footer; (desktop) -->
             <section id="flags">
-                <p><img src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">Sverige</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">Danmark</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">Norge</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">Finland</p>
-                <p><img src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">Nederland</p>
+                <ul>
+                    <li>
+                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">
+                        <p>Sverige</p>
+                    </li>
+                    <li>
+                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">
+                        <p>Danmark</p>
+                    </li>
+                    <li>
+                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">
+                        <p>Norge</p>
+                    </li>
+                    <li>
+                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">
+                        <p>Suomi</p>
+                    </li>
+                    <li>
+                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">
+                        <p>Nederland</p>
+                    </li>
+                </ul>
             </section>
             <section id="payment-options">
-                <h3>BETALINGSMETODER</h3>
+                <h5>BETALINGSMETODER</h5>
                 <ul>
                     <li><i class="fa-brands fa-cc-visa"></i></li>
                     <li><i class="fa-brands fa-cc-mastercard"></i></li>
@@ -240,18 +257,26 @@
                     <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
                 </ul>
             </section>
-            <section id="footer-news-and-customerservice-wrapper">
-                <nav id="news-and-offers">
-                    <h3>NYHETER & TILBUD</h3>
-                    <p id="news-and-offers-overlaytext">Meld deg på nyhetsbrev her</p>
-                    <form>
-                        <input type="text" placeholder="ola@example.com...">
-                        <input type="submit" value="Send">
-                    </form>
-                    <a href="#">Kjøp reisegavekort</a>
+            <section id="news-and-offers">
+                <nav>
+                    <h5>NYHETER & TILBUD</h5>
+                    <fieldset>
+                        <legend>Meld deg på nyhetsbrev her</legend>
+                        <form>
+                            <input type="text" placeholder="ola@example.com...">
+                            <input id="newsletter-button" type="submit" value="Send">
+                        </form>
+                    </fieldset>
+                    <ul>
+                        <li>
+                            <a id="buy-giftcard-link" href="#">Kjøp reisegavekort</a>
+                        </li>
+                    </ul>
                 </nav>
-                <nav id="customer-service">
-                    <h3>KUNDESERVICE</h3>
+            </section>
+            <section id="customer-service">
+                <nav>
+                    <h5>KUNDESERVICE</h5>
                     <ul>
                         <li><a class="customer-service-link" href="#">Spørsmål og svar</a></li>
                         <li><a class="customer-service-link" href="#">Chat</a></li>
@@ -261,7 +286,7 @@
                 </nav>
             </section>
             <section id="social-media">
-                <h3>SOSIALE MEDIER</h3>
+                <h5>SOSIALE MEDIER</h5>
                 <ul>
                     <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
