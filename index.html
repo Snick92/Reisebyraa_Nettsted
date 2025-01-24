@@ -51,10 +51,10 @@
                 <img id="banner" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
             </section>
             <section id="search-form-section"> <!-- grid-area: 2/4 -->
-                <nav id="form-scroll-container">
+                <nav class="horizontal-nav-bar">
                     <ul>
                         <li class="scroll-menu-item">
-                            <a href="#"><i class="fa-solid fa-suitcase"></i> Fly + Hotell</a>
+                            <a aria-current="page" id="current-page" href="#"><i class="fa-solid fa-suitcase"></i> Fly + Hotell</a>
                         </li>
                         <li class="scroll-menu-item">
                             <a href="#"><i class="fa-solid fa-plane"></i> Fly</a>
@@ -74,7 +74,7 @@
                     </ul>
                 </nav>
                 <form id="travel-form" name="travel-form">
-                    <fieldset class="form-item">
+                    <fieldset class="form-item" id="form-item-1">
                         <legend>Fra</legend>
                         <select name="origin">
                             <option value="Oslo Lufthavn">Oslo Lufthavn</option>
@@ -83,7 +83,7 @@
                             <option value="Alta Lufthavn">Alta Lufthavn</option>
                         </select>
                     </fieldset>
-                    <fieldset class="form-item">
+                    <fieldset class="form-item" id="form-item-2">
                         <legend>Til</legend>
                         <select name="destination">
                             <option value="Albania">Albania</option>
@@ -92,26 +92,20 @@
                             <option value="Hellas">Hellas</option>
                         </select>
                     </fieldset>
-                    <ul>
-                        <li>
-                            <fieldset class="form-item">
-                                <legend>Reiselengde</legend>
-                                <select name="stay-duration">
-                                    <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
-                                    <option value="1 uke">1 uke</option>
-                                    <option value="2 uker">2 uker</option>
-                                    <option value="Mer enn 2 uker">Mer enn 2 uker</option>
-                                </select>
-                            </fieldset>
-                        </li>
-                        <li>
-                            <fieldset class="form-item">
-                                <legend>Velg dato</legend>
-                                <input type="date" name="departure-date" required>
-                            </fieldset>
-                        </li>
-                    </ul>
-                    <fieldset class="form-item">
+                    <fieldset class="form-item" id="form-item-3">
+                        <legend>Reiselengde</legend>
+                        <select name="stay-duration">
+                            <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
+                            <option value="1 uke">1 uke</option>
+                            <option value="2 uker">2 uker</option>
+                            <option value="Mer enn 2 uker">Mer enn 2 uker</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-item" id="form-item-4">
+                        <legend>Velg dato</legend>
+                        <input type="date" name="departure-date" required>
+                    </fieldset>
+                    <fieldset class="form-item" id="form-item-5">
                         <legend>Antall reisende</legend>
                         <input type="number" min="1" name="amount-of-travelers" required>
                     </fieldset>
@@ -122,19 +116,23 @@
         <main>
             <section id="main-campaign"> <!-- Flex container -->
                 <article>
-                    <ul>
+                    <ul id="main-campaign-card">
                         <li>
                             <h2>Bestill sommerens beste uke</h2>
                         </li>
-                        <li>
+                        <li id="main-campaign-desc">
                             <p>Fly + hotell, 7 dager</p>
                         </li>
-                        <li>
+                        <li id="main-campaign-price">
                             <p>Fra 3 298,-</p>
                         </li>
                     </ul>
+                    <ul>
+                        <li>
+                            <a aria-label="til bestillingsskjema" href="hotell.html">Bestill i dag</a>
+                        </li>
+                    </ul>
                 </article>
-                <a href="hotell.html">Bestill i dag</a>
             </section>
             <section id="main-offers"> <!-- Flex container -->
                 <article class="offers-card">

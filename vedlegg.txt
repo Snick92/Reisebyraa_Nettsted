@@ -55,8 +55,12 @@ Google maps HTML + script:
 https://www.w3schools.com/graphics/google_maps_intro.asp
 
 
-Lang bindestrek med koden:
-&mdash;
+Lang bindestrek med koden: &mdash;
 Hentet fra: https://www.lib.ncsu.edu/web-style-guide/writing-for-the-web/en-and-em-dashes
+
+
+Skjuling av scrollbars:
+Hentet fra: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+
 
 ---- AI prompts (hvis relevant): ----
