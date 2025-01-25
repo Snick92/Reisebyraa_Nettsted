@@ -41,6 +41,12 @@ gå ut over designet vist i oppgaven.
 Selve font / tekst-størrelsene var noe vanskelig å tolke da det ikke var gitt noen konkrete beskrivelser i oppgaveteksten - noe som igjen førte til en del prøving og feiling da det eneste utgangspunktet var ren
 gjetting ut ifra eksempelbildene.
 
+Tips & inspirasjon:
+Oppgavebeskrivelsen sier: "Seksjonen skal inneholde minimum 6 artikkelkort, og layouten skal lages ved bruk av CSS Flexbox."
+Min tolkning av dette er at kortene er plassert i en flexbox (altså "layout"), mens selve innholdet i kortene kan struktureres slik man ønsker
+da det kan tyde på at formuleringen i oppgaven ikke peker direkte på innholdet, men heller seksjonen. Jeg valgte å bruke grid i kortene mine med 
+begrunnelse i at jeg synes overlapping av elementer er enklere og ryddigere versus flexbox ("ukens deal" og "nyhet" taggene over bildene).
+
 ---- Kilder: ----
 
 APA 7th!

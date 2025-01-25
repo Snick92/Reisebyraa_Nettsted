@@ -109,7 +109,10 @@ body{
         display: flex;
         width: 100%;
         background-color: var(--project-darkblue);
+
+        
     }
+    
 }
 
 #search-form-section{
@@ -247,16 +250,21 @@ body{
 /* MAIN */
 main{
     grid-area: main;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-.inspiration-card-image{
-    display: flex;
-    width: 100%;
-}
 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+
+    
+    
+}
 #main-campaign{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -265,8 +273,9 @@ main{
     background-image: url(../images/holiday-2733322_1280.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: inherit;
     width: 100%;
+    max-width: 1000px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
@@ -293,6 +302,7 @@ main{
         background-color:var(--project-blue);
         border-radius: 0rem 2rem 0rem 2rem;
         max-width: 300px;
+        
 
         #main-campaign-desc{
             margin-top: 1rem;
@@ -327,8 +337,136 @@ main{
         align-items: center;
         justify-content: center;
     }
+}
 
+#main-offers-scroller{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    overflow-x: scroll;
+    margin-bottom: 1rem;
+}
+
+.offers-card{
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: fit-content;
+    border-radius: 1rem;
+    border: solid 1px var(--project-offwhite);
+    box-shadow: 2px 2px 2px var(--project-lightgrey);
+    background-color: rgb(255, 255, 255);
+    
+    h3{
+        
+        margin-bottom: 1rem;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    ul{
+        list-style: none;
+
+        li{
+            white-space: nowrap;
+        }
+
+        a{
+            text-decoration: none;
+            color: var(--project-blue);
+            font-size: 12px;
+        }
+    }
 }   
+
+#tips-and-inspiration{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-content: center;
+    justify-content: center;
+    
+
+    h2{
+        margin-left: 1rem;
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+.inspiration-card{
+    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
+    
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 2px var(--project-lightgrey);
+    margin: 1rem;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden; /* <- Gjemmer venstresiden til border-bottom (link m/ pris) */
+
+    text-align: start;
+
+    img{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 100%;
+        
+    }
+    figure{
+        display: flex;
+        
+        figcaption{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            background-color: var(--project-blue);
+            height: 3rem;
+            width: 8rem;
+            border-radius: 0.5rem 0 1rem 0;
+            color: var(--project-offwhite);
+            font-size: 16px;
+            font-weight: bold;
+    }
+    }
+    h3{
+        padding: 1rem;
+        margin-bottom: 1rem;
+        
+    }
+    p{
+        padding: 1rem;
+    }
+    a{
+        display: inline-block;
+        text-decoration: none;
+        color: var(--project-darkgrey);
+        border-bottom: 3px solid var(--project-blue);
+        margin-top: auto;
+        width: fit-content;
+    }
+}
 
 /* FOOTER (global) */
 footer{
@@ -493,6 +631,49 @@ footer{
 }
 
 
+/* --- DESKTOP --- */
+@media only screen and (min-width: 810px){
+    #banner{
+        display: flex;
+        width: 100%;
+    }   
+    
+    #main-offers-scroller{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1 1 200px;
+        overflow: visible;
+        margin: 0;
+    }
+    #inspiration-card-flex-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+       
+        justify-content: space-evenly;
+    }
+    .inspiration-card{
+        
+        width: 100%;
+        max-width: 340px;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+    img{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 100%;
+        max-height: 200px;
+    }
+}
 
 /* TEST:
 #global-header-form-container {
