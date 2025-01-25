@@ -60,8 +60,8 @@ body{
         }
     }
     #logo{
-        width: 70px;
-        height: 70px;
+        max-width: 70px;
+        max-height: 70px;
         align-items: center;
     }
     #buttons-wrapper ul{
@@ -94,10 +94,10 @@ body{
     "section-1"
     "section-2"
     "section-3"
-    "section-4"
-    ;
+    "section-4";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
+    
 }
 #banner-section{
     grid-row-start: section-1;
@@ -130,7 +130,7 @@ body{
         
     .form-item{
         margin-bottom: 1rem;
-        height: 60px;
+        min-height: 60px;
         
         legend{
             margin-left: 0.5rem;
@@ -239,7 +239,7 @@ body{
     border: rgba(255, 255, 255, 0);
     border-radius: 0.5rem;
     width: 100%;
-    height: 40px;
+    min-height: 40px;
     font-weight: bold;
 }
 
@@ -259,7 +259,7 @@ main{
     
     
 }
-#main-campaign{
+#campaign-section{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -273,7 +273,7 @@ main{
     background-image: url(../images/holiday-2733322_1280.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: inherit;
+    
     width: 100%;
     max-width: 1000px;
     margin-top: 1rem;
@@ -291,7 +291,7 @@ main{
         align-items: flex-end;
     }
 
-    #main-campaign-card{
+    #campaign-card{
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
@@ -304,7 +304,7 @@ main{
         max-width: 300px;
         
 
-        #main-campaign-desc{
+        #campaign-desc{
             margin-top: 1rem;
         }
 
@@ -312,7 +312,7 @@ main{
             font-size: 16px;
         }
 
-        #main-campaign-price{
+        #campaign-price{
             margin-top: 0.3rem;
             font-size: 20px;
             font-weight: bold;
@@ -323,8 +323,8 @@ main{
     a{
         display: flex;
         background-color: var(--project-yellow);
-        width: 6rem;
-        height: 2rem;
+        min-width: 6rem;
+        min-height: 2rem;
         font-size: 12px;
         font-weight: bold;
         text-decoration: none;
@@ -339,7 +339,7 @@ main{
     }
 }
 
-#main-offers-scroller{
+#offers-section--scroller{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -360,7 +360,7 @@ main{
 
     justify-content: center;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
     width: fit-content;
     border-radius: 1rem;
     border: solid 1px var(--project-offwhite);
@@ -389,7 +389,7 @@ main{
     }
 }   
 
-#tips-and-inspiration{
+#tips-and-inspiration-section{
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -401,14 +401,19 @@ main{
     align-content: center;
     justify-content: center;
     
-
     h2{
         margin-left: 1rem;
         width: 100%;
         font-size: 20px;
     }
 }
-
+#inspiration-card-flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+    gap: 1rem;
+}
 .inspiration-card{
     
     display: flex;
@@ -421,15 +426,16 @@ main{
     margin: 1rem;
     background-color: rgb(255, 255, 255);
     overflow: hidden; /* <- Gjemmer venstresiden til border-bottom (link m/ pris) */
-
+    
     text-align: start;
 
     img{
-        display: flex;
+        display: block;
         flex-direction: row;
         flex-wrap: wrap;
-
+        max-height: 300px;
         width: 100%;
+        object-fit: cover;
         
     }
     figure{
@@ -442,8 +448,8 @@ main{
             text-align: center;
             justify-content: center;
             background-color: var(--project-blue);
-            height: 3rem;
-            width: 8rem;
+            min-height: 3rem;
+            min-width: 8rem;
             border-radius: 0.5rem 0 1rem 0;
             color: var(--project-offwhite);
             font-size: 16px;
@@ -476,6 +482,7 @@ footer{
     grid-auto-flow: row;
     grid-gap: 1rem;
     padding: 1rem;
+    margin-top: 3rem;
 
     color:var(--project-offwhite);
     background-color:var(--project-darkgrey);
@@ -502,17 +509,18 @@ footer{
 
         li{
             display: flex;
+            align-items: center;
 
             p{
                 margin: 0.5rem;
-                font-size: 10px;
+                font-size: 12px;    
             }
         }
     }
     .flag-image{
         display: flex;
-        max-width: 100%;
-        width: 36px;
+        width: 100%;
+        max-width: 36px;
     }
 }
 #payment-options{
@@ -638,7 +646,7 @@ footer{
         width: 100%;
     }   
     
-    #main-offers-scroller{
+    #offers-section--scroller{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -650,7 +658,6 @@ footer{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        
        
         justify-content: space-evenly;
     }
@@ -669,6 +676,7 @@ footer{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        object-fit: cover;
 
         width: 100%;
         max-height: 200px;
