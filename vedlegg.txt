@@ -47,6 +47,12 @@ Min tolkning av dette er at kortene er plassert i en flexbox (altså "layout"), 
 da det kan tyde på at formuleringen i oppgaven ikke peker direkte på innholdet, men heller seksjonen. Jeg valgte å bruke grid i kortene mine med 
 begrunnelse i at jeg synes overlapping av elementer er enklere og ryddigere versus flexbox ("ukens deal" og "nyhet" taggene over bildene).
 
+Google Maps:
+"Kart: Viser hotellets plassering på et kart, du skal implementere et kart fra google 
+maps."
+Denne setningen tolket jeg kanskje vel bokstavelig. Jeg skjønte etter hvert at eksempelbildene til oppgaven kun hadde et skjermutklipp av Google Maps
+med Parga Beach. Men innen jeg innså det hadde jeg allerede opprettet api-nøkkel på Google Cloud og lagt inn kartet på siden min.
+
 ---- Kilder: ----
 
 APA 7th!

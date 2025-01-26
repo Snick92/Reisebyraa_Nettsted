@@ -46,228 +46,214 @@
                 </ul>
             </nav>
         </header>
-        <div id="gallery-and-sections-grid-container">
-            <header id="gallery">
-                <nav id="gallery-button-grid-container"> <!-- (grid-container )-->
-                    <section id="heart-button">
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    </section>
-                    <section id="arrow-buttons">
-                        <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
-                        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                    </section>
-                    <section id="gallery-indicator">
-                        <a href="#"><i class="fa-solid fa-images"> 49</i></a>
-                    </section>
-                </nav>
-                <section id="gallery-scroll-container">
-                    <article class="gallery-card"> <!-- Flex-box / Flex item -->
-                        <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Picture of a resort pool by the ocean">
-                    </article>
-                    <article class="gallery-card">
-                        <img src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
-                    </article>
-                    <article class="gallery-card">
-                        <img src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
-                    </article>
-                    <article class="gallery-card">
-                        <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
-                    </article>
-                    <article class="gallery-card">
-                        <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with surrounding cliffs">
-                    </article>
-                    <article class="gallery-card">
-                        <img src="../Reisebyraa_Nettsted/images/holiday-2733322_1280.jpg" alt="Picture of a woman in an oceanside pool">
-                    </article>
-                </section>
-                <nav>
+        <header id="gallery">
+            <nav id="gallery-overlay-nav">
+                <ul class="gallery-buttons--flex-1">
+                    <li id="heart-button" ><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                </ul>
+                <ul class="gallery-buttons--flex-2">
+                    <li class="arrow-buttons"><a href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+                    <li class="arrow-buttons"><a href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
+                <ul class="gallery-buttons--flex-1">
+                    <li id="gallery-indicator"><a href="#"><i class="fa-solid fa-images"> 49</i></a></li>
+                </ul>
+            </nav>
+            <section id="gallery-scroll-container">
+                <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Picture of a resort pool by the ocean">
+                <img src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
+                <img src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
+                <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with surrounding cliffs">
+                <img src="../Reisebyraa_Nettsted/images/holiday-2733322_1280.jpg" alt="Picture of a woman in an oceanside pool">
+            </section>
+            <nav id="gallery-bottom-nav">
+                <ul>
+                    <li>
+                        <a href="#location-overview">Oversikt</a>
+                    </li>
+                    <li>
+                        <a href="#facilities-section">Fasiliteter</a>
+                    </li>
+                    <li>
+                        <a href="#location-available-rooms">Rom</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="location-overview"><!-- Oversikt: -->
+                <h2>Parga Beach</h2>
+                <ul id="rating-sun-list">
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-sun"></i>
+                    </li>
+                </ul>
+                <ul id="score-list">
+                    <li class="location-score">
+                        8.9
+                    </li>
+                    <li id="score-designation">
+                        Fantastisk
+                    </li>
+                </ul>
+                <ul id="all-reviews-link-wrapper">
+                    <li>
+                        <a href="#">Se alle anmeldelsene <i class="fa-solid fa-chevron-right"></i></a>
+                    </li>
+                </ul>
+            </section>
+            <section id="facilities-section"><!-- Fasiliteter: -->
+                <article>
+                    <h2>Fasiliteter</h2>
+                    <p>Parga beach tilbyr et tilsynelatende uutømmelig utvalg av sport og aktiviteter og lokker til seg så vel
+                        eliteutøvere som aktive familier og hverdagsmosjonister - i alle aldre og på alle nivåer.</p>
+                </article>
+                <section id="facility-icons">
                     <ul>
                         <li>
-                            <a href="#parga-beach-overview">Oversikt</a>
+                            <p><i class="fa-solid fa-paw"></i> Kjæledyrvennlig</p>
                         </li>
                         <li>
-                            <a href="#parga-beach-facilities">Fasiliteter</a>
+                            <p><i class="fa-solid fa-mug-hot"></i> Frokost</p>
                         </li>
                         <li>
-                            <a href="#parga-beach-available-rooms">Rom</a>
+                            <p><i class="fa-solid fa-spa"></i> Spa</p>
                         </li>
                     </ul>
-                </nav>
-            </header>
-            <main><!-- grid-area: main; (desktop) -->
-                <section id="parga-beach-overview"><!-- Oversikt: -->
-                    <h2>Parga Beach</h2>
                     <ul>
                         <li>
-                            <i class="fa-solid fa-sun"></i>
+                            <p><i class="fa-solid fa-bell-concierge"></i> Romservice</p>
                         </li>
                         <li>
-                            <i class="fa-solid fa-sun"></i>
+                            <p><i class="fa-solid fa-martini-glass"></i> Bar</p>
                         </li>
                         <li>
-                            <i class="fa-solid fa-sun"></i>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-sun"></i>
-                        </li>
-                        <li>
-                            <i class="fa-regular fa-sun"></i>
+                            <p><i class="fa-solid fa-dumbbell"></i> Treningssenter</p>
                         </li>
                     </ul>
-                    <article>
-                        <ul>
-                            <li id="parga-beach-score">
-                                8.9
-                            </li>
-                            <li id="parga-beach-score-designation">
-                                Fantastisk
-                            </li>
-                        </ul>
-                    </article>
                 </section>
-                <section id="parga-beach-facilities"><!-- Fasiliteter: -->
-                    <article>
-                        <h2>Fasiliteter</h2>
-                        <p>Parga beach tilbyr et tilsynelatende uutømmelig utvalg av sport og aktiviteter og lokker til seg så vel
-                            eliteutøvere som aktive familier og hverdagsmosjonister - i alle aldre og på alle nivåer.</p>
-                    </article>
-                    <section id="facility-icons">
-                        <ul>
-                            <li>
-                                <p><i class="fa-solid fa-paw"></i> Kjæledyrvennlig</p>
-                            </li>
-                            <li>
-                                <p><i class="fa-solid fa-mug-hot"></i> Frokost</p>
-                            </li>
-                            <li>
-                                <p><i class="fa-solid fa-spa"></i> Spa</p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <p><i class="fa-solid fa-bell-concierge"></i> Romservice</p>
-                            </li>
-                            <li>
-                                <p><i class="fa-solid fa-martini-glass"></i> Bar</p>
-                            </li>
-                            <li>
-                                <p><i class="fa-solid fa-dumbbell"></i> Treningssenter</p>
-                            </li>
-                        </ul>
-                    </section>
-                    <a href="#">Se alle eiendomsfasiliteter <i class="fa-solid fa-chevron-right"></i></a>
-                </section>
-                <section id="parga-beach-map"><!-- Kart: -->
-                    <h2>Utforsk området</h2>
-                    <div id="googleMap" style="width:100%;height:400px;"></div>
-                    <script>
-                        function myMap() {
-                        var mapProp= {
-                        center:new google.maps.LatLng(39.28566942598636, 20.388666279878848),
-                        zoom:16,
-                        };
-                        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-                        }
-                    </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQRHZaTBvFBF3rkIu4_1aMDiB_oIoiybQ&callback=myMap"></script>
-                </section>
-                <section id="parga-beach-available-rooms"><!-- Tilgjengelige rom: -->
-                    <h2>Velg rom</h2>
-                    <article class="room-card">
-                        <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
-                        <h4>Junior Suite</h4>
-                        <ul>
-                            <li>Plass til 2</li>
-                            <li>Queen size-seng</li>
-                        </ul>
-                        <ul>
-                            <li>8.9</li>
-                            <li>59 anmeldelser</li>
-                        </ul>
-                        <ul>
-                            <li class="room-card-price"><b>6 789 kr</b></li>
-                            <li>
-                                for 3 netter, 1 rom.<br>
-                                2 263 kr per natt<br>
-                                inkl. moms og avgifter.
-                            </li>
-                        </ul>
-                    </article>
-                    <article class="room-card">
-                        <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
-                        <h4>Junior Suite</h4>
-                        <ul>
-                            <li>Plass til 2</li>
-                            <li>Queen size-seng</li>
-                        </ul>
-                        <ul>
-                            <li>8.9</li>
-                            <li>59 anmeldelser</li>
-                        </ul>
-                        <ul>
-                            <li class="room-card-price"><b>6 789 kr</b></li>
-                            <li>
-                                for 3 netter, 1 rom.<br>
-                                2 263 kr per natt<br>
-                                inkl. moms og avgifter.
-                            </li>
-                        </ul>
-                    </article>
-                    <article class="room-card">
-                        <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
-                        <h4>Junior Suite</h4>
-                        <ul>
-                            <li>Plass til 2</li>
-                            <li>Queen size-seng</li>
-                        </ul>
-                        <ul>
-                            <li>8.9</li>
-                            <li>59 anmeldelser</li>
-                        </ul>
-                        <ul>
-                            <li class="room-card-price"><b>6 789 kr</b></li>
-                            <li>
-                                for 3 netter, 1 rom.<br>
-                                2 263 kr per natt<br>
-                                inkl. moms og avgifter.
-                            </li>
-                        </ul>
-                    </article>
-                    <article class="room-card">
-                        <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
-                        <h4>Junior Suite</h4>
-                        <ul>
-                            <li>Plass til 2</li>
-                            <li>Queen size-seng</li>
-                        </ul>
-                        <ul>
-                            <li>8.9</li>
-                            <li>59 anmeldelser</li>
-                        </ul>
-                        <ul>
-                            <li class="room-card-price"><b>6 789 kr</b></li>
-                            <li>
-                                for 3 netter, 1 rom.<br>
-                                2 263 kr per natt<br>
-                                inkl. moms og avgifter.
-                            </li>
-                        </ul>
-                    </article>
-                    <nav id="sticky-nav">
-                        <ul>
-                            <li>
-                                <h4>8 733 kr</h4>
-                                <p>2 394 kr per natt</p>        
-                            </li>
-                        </ul>
-                        <a href="#">Velg rom</a>
-                    </nav>
-                </section>
-            </main>
-        </div>
-        <aside><!-- grid-area: aside; (desktop) -->
-
-        </aside>
+                <a href="#">Se alle eiendomsfasiliteter <i class="fa-solid fa-chevron-right"></i></a>
+            </section>
+            <section id="location-map"><!-- Kart: -->
+                <h2>Utforsk området</h2>
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+                <script>
+                    function myMap() {
+                    var mapProp= {
+                    center:new google.maps.LatLng(39.28566942598636, 20.388666279878848),
+                    zoom:16.2,
+                    };
+                    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQRHZaTBvFBF3rkIu4_1aMDiB_oIoiybQ&callback=myMap"></script>
+            </section>
+            <section id="location-available-rooms"><!-- Tilgjengelige rom: -->
+                <h2>Velg rom</h2>
+                <nav id="sticky-nav">
+                    <ul>
+                        <li>
+                            <p id="sticky-nav-total-price">8 733 kr</p>
+                            <p>2 394 kr per natt</p>        
+                        </li>
+                    </ul>
+                    <a href="#">Velg rom</a>
+                </nav>
+                <article class="room-card">
+                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <h4>Junior Suite</h4>
+                    <ul>
+                        <li>Plass til 2</li>
+                        <li>Queen size-seng</li>
+                    </ul>
+                    <ul>
+                        <li class="location-score">8.9</li>
+                        <li>59 anmeldelser</li>
+                    </ul>
+                    <ul>
+                        <li class="room-card-price"><b>6 789 kr</b></li>
+                        <li>
+                            for 3 netter, 1 rom.<br>
+                            2 263 kr per natt<br>
+                            inkl. moms og avgifter.
+                        </li>
+                    </ul>
+                </article>
+                <article class="room-card">
+                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <h4>Junior Suite</h4>
+                    <ul>
+                        <li>Plass til 2</li>
+                        <li>Queen size-seng</li>
+                    </ul>
+                    <ul>
+                        <li>8.9</li>
+                        <li>59 anmeldelser</li>
+                    </ul>
+                    <ul>
+                        <li class="room-card-price"><b>6 789 kr</b></li>
+                        <li>
+                            for 3 netter, 1 rom.<br>
+                            2 263 kr per natt<br>
+                            inkl. moms og avgifter.
+                        </li>
+                    </ul>
+                </article>
+                <article class="room-card">
+                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <h4>Junior Suite</h4>
+                    <ul>
+                        <li>Plass til 2</li>
+                        <li>Queen size-seng</li>
+                    </ul>
+                    <ul>
+                        <li>8.9</li>
+                        <li>59 anmeldelser</li>
+                    </ul>
+                    <ul>
+                        <li class="room-card-price"><b>6 789 kr</b></li>
+                        <li>
+                            for 3 netter, 1 rom.<br>
+                            2 263 kr per natt<br>
+                            inkl. moms og avgifter.
+                        </li>
+                    </ul>
+                </article>
+                <article class="room-card">
+                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <h4>Junior Suite</h4>
+                    <ul>
+                        <li>Plass til 2</li>
+                        <li>Queen size-seng</li>
+                    </ul>
+                    <ul>
+                        <li>8.9</li>
+                        <li>59 anmeldelser</li>
+                    </ul>
+                    <ul>
+                        <li class="room-card-price"><b>6 789 kr</b></li>
+                        <li>
+                            for 3 netter, 1 rom.<br>
+                            2 263 kr per natt<br>
+                            inkl. moms og avgifter.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
         <footer id="global-footer"><!-- grid-area: footer; (desktop) -->
             <section id="flags">
                 <ul>
