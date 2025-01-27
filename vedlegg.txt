@@ -53,6 +53,14 @@ maps."
 Denne setningen tolket jeg kanskje vel bokstavelig. Jeg skjønte etter hvert at eksempelbildene til oppgaven kun hadde et skjermutklipp av Google Maps
 med Parga Beach. Men innen jeg innså det hadde jeg allerede opprettet api-nøkkel på Google Cloud og lagt inn kartet på siden min.
 
+
+Bestillingsskjema (order.html):
+Utseendemessig viser bildene i oppgaveteksten to forskjellige elementer på bestillingssiden for mobil og desktop (se vedlagte bilder).
+Den første tanken min var at innholdet i elementet faktisk skulle skifte utseende etter breakpoint for desktop, men siden før-pris og nåværende
+pris manglet strek og rødfarge tenkte jeg det var rimelig å anse det som en feil. Jeg valgte derfor å bruke designet for mobil på desktop-versjonen
+for et standardisert utseende.
+
+
 ---- Kilder: ----
 
 APA 7th!

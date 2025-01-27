@@ -45,8 +45,17 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
+/* GLOBAL */
+.rating-sun-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1rem;
 
-
+    li{
+        color:var(--project-yellow);
+    }
+}
 /* TOP NAV (global) */
 #top-nav-flex-container{
     grid-area: top-nav;
@@ -532,7 +541,7 @@ main{
             display: flex;
             justify-content: center;
             align-items: center;
-            color: rgb(221, 0, 0);
+            color: rgb(255, 0, 0);
             background-color: var(--project-offwhite);
             border-radius: 50%;
             padding: 0.5rem;
@@ -641,16 +650,7 @@ main{
     h2{
         display: inline-block;
     }
-    #rating-sun-list{
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        gap: 1rem;
 
-        li{
-            color:var(--project-yellow);
-        }
-    }
     #score-list{
         display: flex;
         flex-direction: row;
@@ -698,7 +698,7 @@ main{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 1rem;
         
 
@@ -856,10 +856,154 @@ main{
 }
 
 /* BESTILLINGSSIDE (order.html) */
+/* Horizontal nav */
+#progres-bar-section{
+    overflow: hidden;
+    max-width: 1000px;
 
+    ul{
+        align-items: center;
+        background-color: var(--project-blue);
+        border-radius: 0rem 0rem 1rem 1rem;
+        
+        li {
+            color: var(--project-offwhite);
+            
+            margin: 0;
 
+            a{
+                color: var(--project-offwhite);
+            }
+        }
+        .fa-chevron-right{
+            font-size: 30px;
+        }
+    }
+}
+/* Drop down */
+#overview-section{
 
+    details ::marker{
+        content: none;
+    }
+    
+    details{
+        border: 3px solid var(--project-lightgrey);
+        padding: 0.5rem;
+        margin: 1rem;
+        border-radius: 0.5rem;
 
+        summary{
+            color: var(--project-darkgrey);
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+        img{
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+        h4{
+            color:var(--custom-grey--form-text);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        #summary-ul-2{
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            color: var(--custom-grey--form-text);
+
+            #summary-flex-space-1{
+                
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                padding-top: 1rem;
+
+                .summary-flex-space-2{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+            
+
+        }
+        .location-pricing{
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            margin-top: 1rem;
+
+            #location-old-price{
+                font-size: 16px;
+                color:var(--custom-grey--form-text);
+                border-top: 1px solid var(--project-lightgrey);
+                padding-top: 0.5rem;
+            }
+            #location-new-price{
+                font-size: 18px;
+                color: rgb(255, 0, 0);
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+/* Order form section */
+#order-form{
+    
+    h2{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    form{
+        gap: 1rem;
+        padding: 1rem;
+        
+        #fieldset-1, #fieldset-2{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-basis: 0;
+            background-color: var(--project-offwhite);
+            border-radius: 0.5rem;
+            border: 1p solid var(--project-offwhite);
+
+            legend{
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 0.5rem;
+                margin-bottom: 1rem;
+            }
+            label{
+                font-weight: 600;
+            }
+            ul{
+                list-style: none;
+                
+                .common-list-item{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0.5rem;
+                    min-width: 300px;
+                    max-width: 400px;
+
+                    label{
+                        margin-bottom: 1rem;
+                    }
+
+                    input{
+                        padding: 0.5rem;
+                        border: 1px solid var(--project-lightgrey);
+                        border-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
 /* FOOTER (global) */
 footer{
     grid-area: footer;
