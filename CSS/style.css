@@ -19,6 +19,9 @@
 
 /* Adjusted for opacity */
 --custom-darkgrey--button-background: #25252585;
+
+/* Transparent */
+--invis:rgba(0, 0, 0, 0);
 }
 
 /* General web-site values */
@@ -62,6 +65,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
+    border-bottom: 1px solid var(--project-lightgrey);
 
     nav ul{
         list-style: none;
@@ -94,52 +98,45 @@ body{
     }
     #hamburger-button{
         font-size: 2rem;
-        background-color: #ffffff00;
-        border:#ffffff00;
+        background-color:var(--invis);
+        border: var(--invis);
     }
 }
 
 /* HEADER 2 (index.html) */
-#header-search-form-grid-container{
+.banner-and-form-grid{
     grid-area: header;
     display: grid;
-    grid-template-areas: 
-    "section-1"
-    "section-2"
-    "section-3"
-    "section-4";
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    
-}
-#banner-section{
-    grid-row-start: section-1;
-    grid-row-end: section-3;
-    grid-column-start: 1;
-    grid-column-end: 1;
-
-    img{
-        
-        width: 100%;
-        background-color: var(--project-darkblue);
-
-        
-    }
-    
-}
-
-#search-form-section{
-    grid-row-start: section-2;
-    grid-row-end: section-4;
-    grid-column-start: 1;
-    grid-column-end: 1;
-
-    background-color: rgb(255, 255, 255);
-    border-radius: 1rem;
-    margin: 1rem;
-
+    grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
     overflow: hidden;
+}
+.banner-section{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    max-width: 1400px;
+    
+    img{
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        background-color: var(--project-darkblue);
+    }
+}
+.search-form-section{
+    grid-column: 1/2;
+    grid-row: 2/5;
+   
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--project-lightgrey);
+    box-shadow: 2px 2px 2px var(--project-lightgrey);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     max-width: 1000px;
+    
+    overflow: hidden;
         
     .form-item{
         margin-bottom: 1rem;
@@ -149,34 +146,29 @@ body{
             margin-left: 0.5rem;
 
         }
-
         input{
             color: var(--custom-grey--form-text);
-            border-color: rgba(255, 255, 255, 0);
+            border-color: var(--invis);
             width: 100%;
             padding: 0.5rem;
         }
-
         select{
             color: var(--custom-grey--form-text);
-            background-color: rgba(255, 255, 255, 0);
-            border-color: rgba(255, 255, 255, 0);
+            background-color: var(--invis);
+            border-color: var(--invis);
             width: 100%;
             padding: 0.5rem;
         }
     }
 }
-#travel-form{
+.search-form{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: row;
     grid-gap: 1rem;
     padding: 1rem;
-    
 }
-.horizontal-nav-bar{
-    width: 100%;
-}
+
 .horizontal-nav-bar ul{
     display: flex;
     flex-direction: row;
@@ -249,10 +241,11 @@ body{
     grid-column-end: 3;
 
     background-color: var(--project-yellow);
-    border: rgba(255, 255, 255, 0);
+    border: var(--invis);
     border-radius: 0.5rem;
     width: 100%;
-    min-height: 40px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-weight: bold;
 }
 
@@ -268,9 +261,8 @@ main{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 1rem;
-
-    
-    
+    max-width: 1000px;
+    justify-self: center;
 }
 #campaign-section{
     grid-row-start: 1;
@@ -433,7 +425,8 @@ main{
     flex-direction: column;
     flex-grow: 0;
     flex-shrink: 1;
-    
+    max-width: 100%;
+
     border-radius: 0.5rem;
     box-shadow: 2px 2px 2px 2px var(--project-lightgrey);
     margin: 1rem;
@@ -493,25 +486,25 @@ main{
 
 
 /* GALLERY */
-#gallery{
+.gallery{
     grid-area: header;
     
     display: grid;
     grid-template-areas: 
     "gallery-1"
-    "gallery-2";
-
-    height: auto;
+    "gallery-bottom-nav";
+    justify-content: center;
+    
     white-space: nowrap;
     overflow-x: scroll;
     
 }
-#gallery-scroll-container nav{
+.gallery-scroll-container nav{
     grid-area: gallery-1;
     display: flex;
     flex-direction: row;
 }
-#gallery-overlay-nav{
+.gallery-overlay-nav{
     grid-area: gallery-1;
     display: flex;
     flex-direction: column;
@@ -593,21 +586,23 @@ main{
     }
 }
 
-#gallery-scroll-container{
+.gallery-scroll-container{
     grid-area: gallery-1;
     z-index: 1;
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img-1 img-2 img-3 img-4 img-5 img-6";
     overflow-x: scroll;    
     overflow-y: hidden;
-}
-#gallery-scroll-container img{
-    min-width: auto;
-    max-height: 300px;
     
 }
+.gallery-scroll-container img{
+    max-width: 375px;
+    min-height: 100%;
+}
 #gallery-bottom-nav{
-    grid-area: gallery-2;
+    grid-area: gallery-bottom-nav;
     border-bottom: 1px solid var(--project-lightgrey);
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -646,6 +641,7 @@ main{
     flex-direction: column;
     gap: 1rem;
     margin: 2rem 1rem 1rem 1rem;
+    
 
     h2{
         display: inline-block;
@@ -729,7 +725,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
 
     h2{
         display: block;
@@ -790,7 +786,7 @@ main{
     border-radius: 0.5rem;
     border: 1px solid var(--project-lightgrey);
     max-width: 400px;
-    min-width: 225px;
+    min-width: 190px;
     margin: 1rem;
     
     img{
@@ -1005,7 +1001,7 @@ main{
     }
 }
 /* FOOTER (global) */
-footer{
+.global-footer{
     grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1122,7 +1118,6 @@ footer{
 
     display: flex;
     flex-direction: column;
-
     font-size: 10px;
 
     ul{
@@ -1162,52 +1157,205 @@ footer{
 
 
 
-/* -- DESKTOP -- */
-@media only screen and (min-width: 810px){
-
-    /* FORSIDE */
-    #banner{
-        display: flex;
-        width: 100%;
-
-    }   
-    
-    #offers-section--scroller{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex: 1 1 200px;
-        
-        margin: 0;
-    }
+@media (min-width: 500px){
     #inspiration-card-flex-container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-       
         justify-content: space-evenly;
     }
+    
     .inspiration-card{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        flex-shrink: 1;
+        max-width: 40%;
         
-        width: 100%;
-        max-width: 340px;
         
         ul{
             display: flex;
             flex-direction: column;
-
         }
     }
-    /* HOTELL */
-    #gallery{
-        display: grid;
-        grid-template-areas:  
-        "large-img large-img small-img small-img"
-        "large-img large-img large-img large-img"
-        "small-img small-img large-img large-img";
+}
+@media (min-width: 690px){
+    #scroll-indicator{
+        display: none;
     }
-    
-    #gallery-scroll-container{
-        overflow: visible;
+    .gallery-scroll-container{
+        display: grid;
+        max-width: 1000px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+        grid-template-areas:
+        "img-1 img-1 img-2 img-3"
+        "img-1 img-1 img-4 img-4"
+        "img-5 img-6 img-4 img-4";
+
+        #img-1{grid-area: img-1;}
+        #img-2{grid-area: img-2;}
+        #img-3{grid-area: img-3;}
+        #img-4{grid-area: img-4;}
+        #img-5{grid-area: img-5;}
+        #img-6{grid-area: img-6;}
+    }
+    .gallery-scroll-container img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+    .gallery-overlay-nav{
+        max-width: 1000px;
+
+        .arrow-buttons{
+            display: none;
+        }
+    }
+}
+@media (min-width: 665px) {
+    .room-card{
+        min-width: 200px;
+        max-width: 320px;
+    }
+}
+@media (min-width: 845px) {
+    .room-card{
+        min-width: 250px;
+        max-width: 300px;
+    }
+}
+@media (min-width: 800px) {
+
+    /* FORSIDE */   
+    #offers-section--scroller{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1 1 200px;  
+        margin: 0;
+    }
+    .inspiration-card{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        flex-shrink: 1;
+        max-width: 25%;
+    }
+}
+@media (min-width: 1010px) {
+
+    .banner-and-form-grid{
+        grid-template-columns: 1400px;
+        grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
+        justify-content: center;
+    }
+    .banner-section{
+        
+        grid-row: 1/3;
+        grid-column: 1/2;
+
+        img{
+            min-width: 100%;
+            max-height: 100px;
+        }
+    }
+    .search-form-section{
+        justify-self: center;
+        grid-row: 2/4;
+        grid-column: 1/2;
+    }
+    .search-form{
+        grid-template-rows: auto;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+        padding-bottom: 0;
+    }
+    #form-item-1{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #form-item-2{
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #form-item-3{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #form-item-4{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    #form-item-5{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 5;
+        grid-column-end: 6;
+    }
+    #form-submit-button{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 6;
+        grid-column-end: 7;
+
+        margin-bottom: 0.5rem;
+    }
+
+    .global-footer{
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        
+        h5{
+            margin-bottom: 1rem;
+            font-size: 18px;
+        }
+        a, p, legend{
+            font-size: 14px;
+        }
+    }
+    #flags{
+        grid-column: 1/5;
+        grid-row: 1/2;
+        
+        ul{
+            justify-content: space-evenly;
+        }
+        .flag-image{
+            width: 100%;
+            max-width: 36px;
+        }
+    }
+    #payment-options{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        
+    }
+    #news-and-offers{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    #customer-service{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        align-items: flex-end;
+    }
+    #social-media{
+        grid-column: 4/5;
+        grid-row: 2/3;
+        align-items: flex-end;
+        h5{
+            margin-right: 1.8rem;
+        }
     }
 }
