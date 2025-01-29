@@ -3,18 +3,18 @@
 :root {
 
 /* Project colors */
---project-lightblue: #52d3f0;
+--project-lightblue: #52d3f0; 
 --project-blue: #1ca2c1;
 --project-darkblue: #027792;
 
---project-offwhite: #f6f5f2;
---project-lightgrey: #e8e8e8;
---project-darkgrey: #252525;
+--project-offwhite: #f6f5f2; /* Fonts, borders etc. */
+--project-lightgrey: #e8e8e8; /* Border color */
+--project-darkgrey: #252525; /* Text & fonts */
 
---project-yellow: #ffcf40;
---project-green: #019101;
+--project-yellow: #ffcf40; /* Buttons */
+--project-green: #019101; /* Highlighter */
 
-/* Adjusted colors (for readability) */
+/* Adjusted for readability */
 --custom-grey--form-text: #707070;
 
 /* Adjusted for opacity */
@@ -66,6 +66,7 @@ body{
     justify-content: space-between;
     padding: 0.5rem;
     border-bottom: 1px solid var(--project-lightgrey);
+    box-shadow: 2px 2px 2px var(--project-lightgrey);
 
     nav ul{
         list-style: none;
@@ -123,10 +124,11 @@ body{
         background-color: var(--project-darkblue);
     }
 }
+
 .search-form-section{
     grid-column: 1/2;
     grid-row: 2/5;
-   
+    
     background-color: rgb(255, 255, 255);
     border: 1px solid var(--project-lightgrey);
     box-shadow: 2px 2px 2px var(--project-lightgrey);
@@ -141,7 +143,8 @@ body{
     .form-item{
         margin-bottom: 1rem;
         min-height: 60px;
-        
+        border-radius: 0.5rem;
+
         legend{
             margin-left: 0.5rem;
 
@@ -150,14 +153,16 @@ body{
             color: var(--custom-grey--form-text);
             border-color: var(--invis);
             width: 100%;
-            padding: 0.5rem;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            
         }
         select{
             color: var(--custom-grey--form-text);
-            background-color: var(--invis);
+            background-color: rgb(255, 255, 255);
             border-color: var(--invis);
             width: 100%;
             padding: 0.5rem;
+            cursor: pointer;
         }
     }
 }
@@ -177,7 +182,7 @@ body{
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
-    margin-top: 1rem;
+    
     margin-left: 1rem;
     margin-right: 1rem;
 
@@ -247,6 +252,7 @@ body{
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 
@@ -419,21 +425,7 @@ main{
    
     gap: 1rem;
 }
-.inspiration-card{
-    
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-    flex-shrink: 1;
-    max-width: 100%;
-
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 2px 2px var(--project-lightgrey);
-    margin: 1rem;
-    background-color: rgb(255, 255, 255);
-    overflow: hidden; /* <- Gjemmer venstresiden til border-bottom (link m/ pris) */
-    
-    text-align: start;
+#inspiration-card-flex-container > *{
 
     img{
         display: block;
@@ -733,6 +725,7 @@ main{
         padding: 1rem;
     }
 }
+
 #sticky-nav{
     display: flex;
     flex-direction: row;
@@ -776,18 +769,25 @@ main{
         font-weight: 500;
     }
 }
-.room-card{
+.global-card{
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
-    border-radius: 0.5rem;
-    border: 1px solid var(--project-lightgrey);
+
     max-width: 400px;
     min-width: 190px;
+    border-radius: 0.5rem;
     margin: 1rem;
+    box-shadow: 2px 2px 2px 2px var(--project-lightgrey);
+    border: 1px solid var(--project-lightgrey);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden; /* <- Hides border-bottom (left side) for #inspiration-card */
+}
+
+#room-card-1, #room-card-2, #room-card-3, #room-card-4{
     
     img{
         width: 100%;
@@ -797,59 +797,60 @@ main{
         padding: 1rem;
         font-size: 20px;
     }
-    #card-ul-1{
+    .card-ul-1{
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         padding: 0rem 1rem 0.5rem 1rem;
-
+    
         li{
             font-size: 12px;
         }
-
+    
         :first-child{
             list-style: none;
         }
-
+    
         :last-child{
             margin-left: 1.5rem;
         }
     }
-    #card-ul-2{
+    .card-ul-2{
         display: flex;
         flex-direction: row;
         padding: 0rem 1rem 1rem 1rem;
         align-items: center;
-
+    
         li{
             list-style: none;
         }
-
+    
         :first-child{
             font-size: 12px;
         }
-
+    
         :last-child{
             margin-left: 0.3rem;
             font-weight: bold;
             font-size: 10px;
         }
     }
-    #card-ul-3{
+    .card-ul-3{
         display: flex;
         flex-direction: column;
         padding: 0rem 1rem 1rem 1rem;
-
+    
         :first-child{
             font-size: 20px;
         }
-
+    
         li{
             list-style: none;
             font-size: 12px;
         }
     }
 }
+
 
 /* BESTILLINGSSIDE (order.html) */
 /* Horizontal nav */
@@ -876,9 +877,8 @@ main{
         }
     }
 }
-/* Drop down */
+/* Drop down (order.html - "Dine valg >")*/
 #overview-section{
-
     details ::marker{
         content: none;
     }
@@ -948,24 +948,26 @@ main{
     }
 }
 /* Order form section */
-#order-form{
-    
-    h2{
+#order-form-section{
+    display: flex;
+    flex-direction: column;
+
+    h1{
         margin-left: 1rem;
         margin-right: 1rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
     }
     form{
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
         padding: 1rem;
         
         #fieldset-1, #fieldset-2{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            flex-basis: 0;
             background-color: var(--project-offwhite);
             border-radius: 0.5rem;
-            border: 1p solid var(--project-offwhite);
+            border: 1px solid var(--project-offwhite);
 
             legend{
                 font-size: 18px;
@@ -982,9 +984,9 @@ main{
                 .common-list-item{
                     display: flex;
                     flex-direction: column;
-                    margin: 0.5rem;
-                    min-width: 300px;
-                    max-width: 400px;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                    max-width: 100%;
+                    
 
                     label{
                         margin-bottom: 1rem;
@@ -996,9 +998,96 @@ main{
                         border-radius: 0.5rem;
                     }
                 }
-            }
+                .birthday-item{
+                    display: grid;
+                    grid-template-columns: 40% 30% 25%;
+                    grid-template-rows: 1fr 1fr;
+                    margin-right: 1rem;
+                    margin-left: 1rem;
+                    
+                    justify-content: space-between;
+
+                    label{
+                        grid-column: 1/4;
+                        grid-row: 1/2;
+                        width: 100%;
+                        
+                        margin-bottom: 1rem;
+                    }
+                    input{
+                        padding: 0.5rem;
+                        border: 1px solid var(--project-lightgrey);
+                        border-radius: 0.5rem;
+                        font-size: 10px;
+                    }
+                    :nth-child(2){
+                        grid-column: 1/2;
+                        grid-row: 2/3;
+                        
+                    }
+                    :nth-child(3){
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        
+                    }
+                    :nth-child(4){
+                        grid-column: 3/4;
+                        grid-row: 2/3;
+                        
+                    }
+                }
+                .gender-item{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                    justify-content: flex-start;
+
+                    :nth-child(1){
+                        width: 100%;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                    }
+                    input{
+                        margin-right: 0.5rem;
+                    }
+                    :nth-child(3){
+                        margin-right: 2rem;
+                    }
+                }
+                .country-item{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    margin: 0 0.5rem 0 0.5rem;
+                    padding-bottom: 1rem;
+
+                    select{
+                        padding: 1rem;
+                        border: 1px solid var(--project-lightgrey);
+                        border-radius: 0.5rem;
+                        background-color: rgb(255, 255, 255);
+                        color: var(--custom-grey--form-text);
+                        font-size: 12px;
+
+                        #option-placeholder{
+                            display: none;
+                        }
+                    }
+                }
+            }/* ul end */
+        } /* fieldset end */
+        #order-form-submit{
+            background-color: var(--project-yellow);
+            color: var(--project-darkgrey);
+            font-size: 16px;
+            font-weight: bold;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            max-width: 150px;
         }
-    }
+    }/* form end*/
 }
 /* FOOTER (global) */
 .global-footer{
@@ -1157,28 +1246,7 @@ main{
 
 
 
-@media (min-width: 500px){
-    #inspiration-card-flex-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    
-    .inspiration-card{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 0;
-        flex-shrink: 1;
-        max-width: 40%;
-        
-        
-        ul{
-            display: flex;
-            flex-direction: column;
-        }
-    }
-}
+
 @media (min-width: 690px){
     #scroll-indicator{
         display: none;
@@ -1214,20 +1282,18 @@ main{
     }
 }
 @media (min-width: 665px) {
-    .room-card{
+    .global-card{
         min-width: 200px;
         max-width: 320px;
     }
 }
 @media (min-width: 845px) {
-    .room-card{
+    .global-card{
         min-width: 250px;
         max-width: 300px;
     }
 }
 @media (min-width: 800px) {
-
-    /* FORSIDE */   
     #offers-section--scroller{
         display: flex;
         flex-direction: row;
@@ -1235,15 +1301,70 @@ main{
         flex: 1 1 200px;  
         margin: 0;
     }
-    .inspiration-card{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 0;
-        flex-shrink: 1;
-        max-width: 25%;
-    }
 }
+
+    /* DESKTOP */
 @media (min-width: 1010px) {
+
+    #top-nav-flex-container{
+        padding-top: 0.5rem;
+
+        #logo-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        #buttons-wrapper ul{
+            justify-content: flex-end;
+        }
+        li a{
+            text-decoration: none;
+        }
+        .top-nav-icons{
+            font-size: 24px;
+        }
+        .top-nav-user-links{
+            display: contents;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        #hamburger-list li a{
+            color: var(--project-darkgrey);
+        }
+        #search-wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            
+            p{
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                color: var(--project-darkblue);
+                border: 2px solid var(--project-blue);
+                border-radius: 2rem;
+            }
+        }
+        #my-page-wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            border: 2px solid var(--project-blue);
+            border-radius: 2rem;
+            padding-left: 1rem;
+
+            a{
+                color: var(--project-darkblue);
+                p{
+                    padding: 0.5rem 1rem 0.5rem 1rem;
+                }
+            }
+        }
+        
+        #hamburger-button-wrapper{
+            display: none;
+        }
+    }
 
     .banner-and-form-grid{
         grid-template-columns: 1400px;

@@ -20,13 +20,13 @@
                 <ul>
                     <li id="search-wrapper">
                         <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="#" class=top-nav-user-links>Opprett en konto</a>
+                        <a href="order.html" class=top-nav-user-links><p>Opprett en konto</p></a>
                     </li>
                     <li id="my-page-wrapper">
                         <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i></a>
-                        <a href="#" class="top-nav-user-links">Min side</a>
+                        <a href="#" class="top-nav-user-links"><p>Min side</p></a>
                     </li>
-                    <li>
+                    <li id="hamburger-button-wrapper">
                         <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
                     </li>
                 </ul>
@@ -103,7 +103,7 @@
                     </fieldset>
                     <fieldset class="form-item" id="form-item-4">
                         <legend>Velg dato</legend>
-                        <input type="date" name="departure-date" min="2025-01-31" required>
+                        <input id="datepicker" type="date" name="departure-date" min="2025-01-31" required>
                     </fieldset>
                     <fieldset class="form-item" id="form-item-5">
                         <legend>Antall reisende</legend>
@@ -169,7 +169,7 @@
             <section id="tips-and-inspiration-section"> <!-- Flex container -->
                 <h2>Tips & inspirasjon</h2>
                 <div id="inspiration-card-flex-container">
-                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-1"> <!-- Flex-box / Flex item -->
                         <figure>
                             <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with surrounding cliffs">
                             <figcaption class="card-corner-tag">
@@ -184,7 +184,7 @@
                         </p>
                         <a href="#">Fra kr 3 970 <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-2"> <!-- Flex-box / Flex item -->
                             <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
                         <h3>Solskinnspriser - bestill i dag!</h3>
                         <p class="inspiration-card-text">
@@ -193,7 +193,7 @@
                         </p>
                         <a href="#">Fra kr 3 200 <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-3"> <!-- Flex-box / Flex item -->
                         <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/cathedral-427997_640.jpg" alt="Picture of La Sagrada Familia, Barcelona, Spain">
                         <h3>Storbyferie</h3>
                         <p class="inspiration-card-text">
@@ -202,7 +202,7 @@
                         </p>
                         <a href="#">Les mer <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-4"> <!-- Flex-box / Flex item -->
                         <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/building-7014904_640.jpg" alt="Picture of Tower Bridge, London, England, United Kingdom">
                         <h3>Besøk påskefavoritten London</h3>
                         <p class="inspiration-card-text">
@@ -211,7 +211,7 @@
                         </p>
                         <a href="#">Fra 2 150,- <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-5"> <!-- Flex-box / Flex item -->
                         <figure>
                             <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/ski-slope-3223709_640.jpg" alt="Picture of ski slope with skiier and gondolas">
                             <figcaption class="card-corner-tag">
@@ -225,7 +225,7 @@
                         </p>
                         <a href="#">Se alle skistedene <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="inspiration-card"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-6"> <!-- Flex-box / Flex item -->
                             <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
                         <h3>Spar opptil 7000,- til sommer</h3>
                         <p class="inspiration-card-text">
