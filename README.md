@@ -5,5 +5,5 @@
 
 GitHub repository:
 
-https://github.com/Snick92/Kontinuasjonseksamen---Webutvikling-2025
+https://github.com/Snick92/Reisebyraa_Nettsted
 
