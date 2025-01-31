@@ -12,22 +12,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="top-nav-flex-container">
+        <header id="top-nav-flex-container"><!-- Top nav -->
             <figure id="logo-wrapper">
-                <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>
+                <a href="index.html"><img id="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="vår logo" aria-label="til forsiden"></a>
             </figure>
             <nav id="buttons-wrapper">
                 <ul>
-                    <li id="search-wrapper">
-                        <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="order.html" class=top-nav-user-links><p>Opprett en konto</p></a>
+                    <li id="button-wrapper-1">
+                        <a href="order.html" class="top-nav-icons" aria-label="søk etter destinasjon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#" class=top-nav-user-links aria-label="opprett en ny konto"><p>Opprett en konto</p></a>
                     </li>
-                    <li id="my-page-wrapper">
-                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i></a>
-                        <a href="#" class="top-nav-user-links"><p>Min side</p></a>
+                    <li id="button-wrapper-2">
+                        <a href="#" class="top-nav-user-links" aria-label="min side"><i id="user-icon" class="fa-regular fa-circle-user"></i><p>Min side</p></a>
                     </li>
                     <li id="hamburger-button-wrapper">
-                        <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
+                        <button id="hamburger-button" aria-label="åpne full meny"><i class="fa-solid fa-bars"></i></button>
                     </li>
                 </ul>
                 <ul id="hamburger-list">
@@ -38,7 +37,7 @@
                         <a href="hotell.html" class="top-nav-user-links">Hotell</a>
                     </li>
                     <li>
-                        <a href="https://www.norwegian.no/" class="top-nav-user-links" target="_blank">Fly</a>
+                        <a href="https://www.norwegian.no/" target="_blank" class="top-nav-user-links">Fly</a>
                     </li>
                     <li>
                         <a href="#global-footer" class="top-nav-user-links">Kontakt</a>
@@ -60,12 +59,24 @@
                 </ul>
             </nav>
             <section class="gallery-scroll-container">
-                <img id="img-1" src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Picture of a resort pool by the ocean">
-                <img id="img-2" src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
-                <img id="img-3" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
-                <img id="img-4" src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
-                <img id="img-5" src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with surrounding cliffs">
-                <img id="img-6" src="../Reisebyraa_Nettsted/images/holiday-2733322_1280.jpg" alt="Picture of a woman in an oceanside pool">
+            <figure id="img-1">
+                <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Bilde av basseng ved siden av havet">
+            </figure>
+            <figure  id="img-2">
+                <img src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Bilde av barn som leker på en solrik strand">
+            </figure>
+            <figure id="img-3">
+                <img src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Bilde av bølger som slår inn på en strand">
+            </figure>
+            <figure id="img-4">
+                <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Bilde av strandhytter plassert på stolper i vannet">
+            </figure>
+            <figure id="img-5">
+                <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Bilde av en liten strand omgitt av høye klipper">
+            </figure>
+            <figure id="img-6">
+                <img src="../Reisebyraa_Nettsted/images/holiday-2733322_1280.jpg" alt="Picture of a woman in an oceanside pool">
+            </figure>
             </section>
             <nav id="gallery-bottom-nav">
                 <ul>
@@ -164,7 +175,9 @@
             <section id="location-available-rooms"><!-- Tilgjengelige rom: -->
                 <h2 id="parga-beach-available-rooms">Velg rom</h2>
                 <article class="global-card" id="room-card-1">
-                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <figure>
+                        <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Bilde av en liten strand omgitt av høye klipper">
+                    </figure>
                     <h4>Junior Suite</h4>
                     <ul class="card-ul-1">
                         <li>Plass til 2</li>
@@ -182,7 +195,9 @@
                     </ul>
                 </article>
                 <article class="global-card" id="room-card-2">
-                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <figure>
+                        <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Bilde av en liten strand omgitt av høye klipper">
+                    </figure>
                     <h4>Junior Suite</h4>
                     <ul class="card-ul-1">
                         <li>Plass til 2</li>
@@ -200,7 +215,9 @@
                     </ul>
                 </article>
                 <article class="global-card" id="room-card-3">
-                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <figure>
+                        <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Bilde av en liten strand omgitt av høye klipper">
+                    </figure>
                     <h4>Junior Suite</h4>
                     <ul class="card-ul-1">
                         <li>Plass til 2</li>
@@ -218,7 +235,9 @@
                     </ul>
                 </article>
                 <article class="global-card" id="room-card-4">
-                    <img src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <figure>
+                        <img src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Bilde av en liten strand omgitt av høye klipper">
+                    </figure>
                     <h4>Junior Suite</h4>
                     <ul class="card-ul-1">
                         <li>Plass til 2</li>
@@ -246,27 +265,37 @@
                 </nav>
             </section>
         </main>
-        <footer id="global-footer" class="global-footer"><!-- grid-area: footer; (desktop) -->
+        <footer id="global-footer" class="global-footer"><!-- Footer -->
             <section id="flags">
                 <ul>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Sveriges flagg">
+                        </figure>
                         <p>Sverige</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Danmarks flagg">
+                        </figure>
                         <p>Danmark</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Norges flagg">
+                        </figure>
                         <p>Norge</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">
-                        <p>Suomi</p>
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Finlands flagg">
+                        </figure>
+                        <p><span lang="fi">Suomi</span></p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Nederlands flagg">
+                        </figure>
                         <p>Nederland</p>
                     </li>
                 </ul>
@@ -287,8 +316,8 @@
                     <fieldset>
                         <legend>Meld deg på nyhetsbrev her</legend>
                         <form>
-                            <input type="text" placeholder="ola@example.com...">
-                            <input id="newsletter-button" type="submit" value="Send">
+                            <input type="text" placeholder="ola@example.com..." aria-label="meld deg på vårt nyhetsbrev med din e-postaddresse">
+                            <input id="newsletter-button" type="submit" value="Send" aria-label="send inn påmelding for nyhetsbrev">
                         </form>
                     </fieldset>
                     <ul>
@@ -300,23 +329,23 @@
             </section>
             <section id="customer-service">
                 <nav>
-                    <h5>KUNDESERVICE</h5>
+                    <h5 aria-label="kundeservice">KUNDESERVICE</h5>
                     <ul>
                         <li><a class="customer-service-link" href="#">Spørsmål og svar</a></li>
                         <li><a class="customer-service-link" href="#">Chat</a></li>
                         <li><a class="customer-service-link" href="#">Kontakt</a></li>
-                        <li><a class="customer-service-link" href="#">Tilgjengelighets-erklæring</a></li>
+                        <li><a class="customer-service-link" href="../Reisebyraa_Nettsted/WCAG-tilgjengelighetserklaering.xlsx">Tilgjengelighetserklæring</a></li>
                     </ul>
                 </nav>
             </section>
             <section id="social-media">
-                <h5>SOSIALE MEDIER</h5>
+                <h5 aria-label="våre sosiale medier">SOSIALE MEDIER</h5>
                 <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://no.pinterest.com/#top"><i class="fa-brands fa-pinterest"></i></a></li>
-                    <li><a href="https://www.tiktok.com/explore"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/" aria-label="følg oss på instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" aria-label="følg oss på facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://no.pinterest.com/#top" aria-label="følg oss på pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a href="https://www.tiktok.com/explore" aria-label="følg oss på tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/" aria-label="følg oss på youtube"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </section>
         </footer>

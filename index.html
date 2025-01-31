@@ -12,22 +12,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="top-nav-flex-container">
+        <header id="top-nav-flex-container"><!-- Top nav -->
             <figure id="logo-wrapper">
-                <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>
+                <a href="index.html"><img id="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="vår logo" aria-label="til forsiden"></a>
             </figure>
-            <nav id="buttons-wrapper">
+            <nav id="buttons-wrapper" aria-label="Hovedmeny">
                 <ul>
-                    <li id="search-wrapper">
-                        <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="order.html" class=top-nav-user-links><p>Opprett en konto</p></a>
+                    <li id="button-wrapper-1">
+                        <a href="order.html" class="top-nav-icons" aria-label="søk etter destinasjon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#" class=top-nav-user-links aria-label="opprett en ny konto"><p>Opprett en konto</p></a>
                     </li>
-                    <li id="my-page-wrapper">
-                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i></a>
-                        <a href="#" class="top-nav-user-links"><p>Min side</p></a>
+                    <li id="button-wrapper-2">
+                        <a href="#" class="top-nav-user-links" aria-label="min side"><i id="user-icon" class="fa-regular fa-circle-user"></i><p>Min side</p></a>
                     </li>
                     <li id="hamburger-button-wrapper">
-                        <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
+                        <button id="hamburger-button" aria-label="åpne full meny"><i class="fa-solid fa-bars"></i></button>
                     </li>
                 </ul>
                 <ul id="hamburger-list">
@@ -38,7 +37,7 @@
                         <a href="hotell.html" class="top-nav-user-links">Hotell</a>
                     </li>
                     <li>
-                        <a href="https://www.norwegian.no/" class="top-nav-user-links" target="_blank">Fly</a>
+                        <a href="https://www.norwegian.no/" target="_blank" class="top-nav-user-links">Fly</a>
                     </li>
                     <li>
                         <a href="#global-footer" class="top-nav-user-links">Kontakt</a>
@@ -46,9 +45,11 @@
                 </ul>
             </nav>
         </header>
-        <header class="banner-and-form-grid">
+        <header class="banner-and-form-grid"><!-- skjema m/ bakgrunn -->
             <section class="banner-section">
-                <img id="banner" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Picture of the sea">
+                <figure>
+                    <img id="banner" src="../Reisebyraa_Nettsted/images/sea-4768869_1920.jpg" alt="Bilde av bølger som slår inn på en strand">
+                </figure>
             </section>
             <section class="search-form-section">
                 <nav class="horizontal-nav-bar">
@@ -57,7 +58,7 @@
                             <a aria-current="page" id="current-page" href="#"><i class="fa-solid fa-suitcase"></i> Fly + Hotell</a>
                         </li>
                         <li>
-                            <a href="https://www.norwegian.no/"><i class="fa-solid fa-plane"></i> Fly</a>
+                            <a href="https://www.norwegian.no/" target="_blank"><i class="fa-solid fa-plane"></i> Fly</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa-solid fa-city"></i> Storby</a>
@@ -68,15 +69,15 @@
                         <li>
                             <a href="#"><i class="fa-solid fa-map-location-dot"></i> Kombinasjonsreiser</a>
                         </li>
-                        <li id="scroll-indicator"><!-- Fixed position -->
+                        <li id="scroll-indicator">
                             <i class="fa-solid fa-chevron-right"></i>
                         </li>
                     </ul>
                 </nav>
                 <form class="search-form" name="search-form">
                     <fieldset class="form-item" id="form-item-1">
-                        <legend>Fra</legend>
-                        <select name="origin">
+                        <legend id="origin-label">Fra</legend>
+                        <select name="origin" aria-labelledby="origin-label">
                             <option value="Oslo Lufthavn">Oslo Lufthavn</option>
                             <option value="Torp Sandefjord Lufthavn">Torp Sandefjord Lufthavn</option>
                             <option value="Bergen Lufthavn">Bergen Lufthavn</option>
@@ -84,8 +85,8 @@
                         </select>
                     </fieldset>
                     <fieldset class="form-item" id="form-item-2">
-                        <legend>Til</legend>
-                        <select name="destination">
+                        <legend id="destination-label">Til</legend>
+                        <select name="destination" aria-labelledby="destination-label">
                             <option value="Albania">Albania</option>
                             <option value="Danmark">Danmark</option>
                             <option value="Finland">Finland</option>
@@ -93,8 +94,8 @@
                         </select>
                     </fieldset>
                     <fieldset class="form-item" id="form-item-3">
-                        <legend>Reiselengde</legend>
-                        <select name="stay-duration">
+                        <legend id="stay-duration-label">Reiselengde</legend>
+                        <select name="stay-duration" aria-labelledby="stay-duration-label">
                             <option value="Mindre enn 1 uke">Mindre enn 1 uke</option>
                             <option value="1 uke">1 uke</option>
                             <option value="2 uker">2 uker</option>
@@ -102,19 +103,19 @@
                         </select>
                     </fieldset>
                     <fieldset class="form-item" id="form-item-4">
-                        <legend>Velg dato</legend>
-                        <input id="datepicker" type="date" name="departure-date" min="2025-01-31" required>
+                        <legend id="datepicker-label">Velg dato</legend>
+                        <input id="datepicker" type="date" name="departure-date" min="2025-01-31" aria-labelledby="datepicker-label" required>
                     </fieldset>
                     <fieldset class="form-item" id="form-item-5">
-                        <legend>Antall reisende</legend>
-                        <input type="number" min="1" name="amount-of-travelers" required>
+                        <legend id="amount-of-travelers-label">Antall reisende</legend>
+                        <input type="number" min="1" step="1" name="amount-of-travelers" aria-labelledby="amount-of-travelers-label" required>
                     </fieldset>
-                    <input id="form-submit-button" type="submit" name="form-button" value="Søk">
+                    <input id="form-submit-button" type="submit" name="form-button" value="Søk" aria-label="trykk her for å søke">
                 </form>
             </section>
         </header>
         <main>
-            <section id="campaign-section"> <!-- Flex container -->
+            <section id="campaign-section"><!-- Kampanjer -->
                 <article>
                     <ul id="campaign-card">
                         <li>
@@ -134,7 +135,7 @@
                     </ul>
                 </article>
             </section>
-            <section id="offers-section--scroller"> <!-- Flex container -->
+            <section id="offers-section--scroller">
                 <article class="offers-card">
                     <ul>
                         <li>
@@ -166,12 +167,12 @@
                     </ul>
                 </article>
             </section>
-            <section id="tips-and-inspiration-section"> <!-- Flex container -->
+            <section id="tips-and-inspiration-section"><!-- Tips & inspirasjon -->
                 <h2>Tips & inspirasjon</h2>
                 <div id="inspiration-card-flex-container">
-                    <article class="global-card" id="inspiration-card-1"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-1">
                         <figure>
-                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Picture of beach with surrounding cliffs">
+                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-6514331_640.jpg" alt="Bilde av en liten strand omgitt av høye klipper">
                             <figcaption class="card-corner-tag">
                                 Ukens deal
                             </figcaption>
@@ -184,8 +185,10 @@
                         </p>
                         <a href="hotell.html">Fra kr 3 970 <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="global-card" id="inspiration-card-2"> <!-- Flex-box / Flex item -->
-                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Picture of kids having fun on the beach">
+                    <article class="global-card" id="inspiration-card-2">
+                        <figure>
+                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-1836467_640.jpg" alt="Bilde av barn som leker på en solrik strand">
+                        </figure>
                         <h3>Solskinnspriser - bestill i dag!</h3>
                         <p class="inspiration-card-text">
                             Spar opptil 45%. Akkurat nå tilbyr vi billige vinterreiser til mange reisemål. 
@@ -193,8 +196,10 @@
                         </p>
                         <a href="hotell.html">Fra kr 3 200 <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="global-card" id="inspiration-card-3"> <!-- Flex-box / Flex item -->
-                        <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/cathedral-427997_640.jpg" alt="Picture of La Sagrada Familia, Barcelona, Spain">
+                    <article class="global-card" id="inspiration-card-3">
+                        <figure>
+                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/cathedral-427997_640.jpg" alt="Bilde av Barcelona, Spania, med katedralen La Sagrada Familia i bakgrunnen">
+                        </figure>
                         <h3>Storbyferie</h3>
                         <p class="inspiration-card-text">
                             Bestill en langhelg og unn deg en flott weekendreise i en storby der du selv velger
@@ -202,8 +207,10 @@
                         </p>
                         <a href="hotell.html">Les mer <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="global-card" id="inspiration-card-4"> <!-- Flex-box / Flex item -->
-                        <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/building-7014904_640.jpg" alt="Picture of Tower Bridge, London, England, United Kingdom">
+                    <article class="global-card" id="inspiration-card-4">
+                        <figure>
+                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/building-7014904_640.jpg" alt="Bilde av Tower Bridge, London, England">
+                        </figure>
                         <h3>Besøk påskefavoritten London</h3>
                         <p class="inspiration-card-text">
                             London er en av de mest populære reisemålene i påsken, kjent for sin unike blanding
@@ -211,9 +218,9 @@
                         </p>
                         <a href="hotell.html">Fra 2 150,- <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="global-card" id="inspiration-card-5"> <!-- Flex-box / Flex item -->
+                    <article class="global-card" id="inspiration-card-5">
                         <figure>
-                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/ski-slope-3223709_640.jpg" alt="Picture of ski slope with skiier and gondolas">
+                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/ski-slope-3223709_640.jpg" alt="Bilde av slalomkjøring i alpinbakke med gondoler i bakgrunnen">
                             <figcaption class="card-corner-tag">
                                 Nyhet
                             </figcaption>
@@ -225,8 +232,10 @@
                         </p>
                         <a href="hotell.html">Se alle skistedene <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-                    <article class="global-card" id="inspiration-card-6"> <!-- Flex-box / Flex item -->
-                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Picture of beach-huts on stilts">
+                    <article class="global-card" id="inspiration-card-6">
+                        <figure>
+                            <img class="inspiration-card-image" src="../Reisebyraa_Nettsted/images/beach-666122_640.jpg" alt="Bilde av strandhytter plassert på stolper i vannet">
+                        </figure>
                         <h3>Spar opptil 7000,- til sommer</h3>
                         <p class="inspiration-card-text">
                             Drømmer du om solfylte dager og eksotiske opplevelser? Nå har du sjansen til å sikre deg din
@@ -237,27 +246,37 @@
                 </div>
             </section>
         </main>
-        <footer id="global-footer" class="global-footer"><!-- grid-area: footer; (desktop) -->
+        <footer id="global-footer" class="global-footer"><!-- Footer -->
             <section id="flags">
                 <ul>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Sveriges flagg">
+                        </figure>
                         <p>Sverige</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Danmarks flagg">
+                        </figure>
                         <p>Danmark</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Norges flagg">
+                        </figure>
                         <p>Norge</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">
-                        <p>Suomi</p>
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Finlands flagg">
+                        </figure>
+                        <p><span lang="fi">Suomi</span></p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Nederlands flagg">
+                        </figure>
                         <p>Nederland</p>
                     </li>
                 </ul>
@@ -278,8 +297,8 @@
                     <fieldset>
                         <legend>Meld deg på nyhetsbrev her</legend>
                         <form>
-                            <input type="text" placeholder="ola@example.com...">
-                            <input id="newsletter-button" type="submit" value="Send">
+                            <input type="text" placeholder="ola@example.com..." aria-label="meld deg på vårt nyhetsbrev med din e-postaddresse">
+                            <input id="newsletter-button" type="submit" value="Send" aria-label="send inn påmelding for nyhetsbrev">
                         </form>
                     </fieldset>
                     <ul>
@@ -291,23 +310,23 @@
             </section>
             <section id="customer-service">
                 <nav>
-                    <h5>KUNDESERVICE</h5>
+                    <h5 aria-label="kundeservice">KUNDESERVICE</h5>
                     <ul>
                         <li><a class="customer-service-link" href="#">Spørsmål og svar</a></li>
                         <li><a class="customer-service-link" href="#">Chat</a></li>
                         <li><a class="customer-service-link" href="#">Kontakt</a></li>
-                        <li><a class="customer-service-link" href="#">Tilgjengelighets-erklæring</a></li>
+                        <li><a class="customer-service-link" href="../Reisebyraa_Nettsted/WCAG-tilgjengelighetserklaering.xlsx">Tilgjengelighetserklæring</a></li>
                     </ul>
                 </nav>
             </section>
             <section id="social-media">
-                <h5>SOSIALE MEDIER</h5>
+                <h5 aria-label="våre sosiale medier">SOSIALE MEDIER</h5>
                 <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://no.pinterest.com/#top"><i class="fa-brands fa-pinterest"></i></a></li>
-                    <li><a href="https://www.tiktok.com/explore"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/" aria-label="følg oss på instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" aria-label="følg oss på facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://no.pinterest.com/#top" aria-label="følg oss på pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a href="https://www.tiktok.com/explore" aria-label="følg oss på tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/" aria-label="følg oss på youtube"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </section>
         </footer>

@@ -12,22 +12,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="top-nav-flex-container">
+        <header id="top-nav-flex-container"><!-- Top nav -->
             <figure id="logo-wrapper">
-                <a href="index.html"><img id="logo" rel="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="logo"></a>
+                <a href="index.html"><img id="logo" src="../Reisebyraa_Nettsted/images/fav.png" alt="vår logo" aria-label="til forsiden"></a>
             </figure>
             <nav id="buttons-wrapper">
                 <ul>
-                    <li id="search-wrapper">
-                        <a href="order.html" class="top-nav-icons"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="order.html" class=top-nav-user-links><p>Opprett en konto</p></a>
+                    <li id="button-wrapper-1">
+                        <a href="order.html" class="top-nav-icons" aria-label="søk etter destinasjon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#" class=top-nav-user-links aria-label="opprett en ny konto"><p>Opprett en konto</p></a>
                     </li>
-                    <li id="my-page-wrapper">
-                        <a href="#" class="top-nav-icons"><i class="fa-regular fa-circle-user"></i></a>
-                        <a href="#" class="top-nav-user-links"><p>Min side</p></a>
+                    <li id="button-wrapper-2">
+                        <a href="#" class="top-nav-user-links" aria-label="min side"><i id="user-icon" class="fa-regular fa-circle-user"></i><p>Min side</p></a>
                     </li>
                     <li id="hamburger-button-wrapper">
-                        <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
+                        <button id="hamburger-button" aria-label="åpne full meny"><i class="fa-solid fa-bars"></i></button>
                     </li>
                 </ul>
                 <ul id="hamburger-list">
@@ -38,7 +37,7 @@
                         <a href="hotell.html" class="top-nav-user-links">Hotell</a>
                     </li>
                     <li>
-                        <a href="https://www.norwegian.no/" class="top-nav-user-links" target="_blank">Fly</a>
+                        <a href="https://www.norwegian.no/" target="_blank" class="top-nav-user-links">Fly</a>
                     </li>
                     <li>
                         <a href="order.html#global-footer" class="top-nav-user-links">Kontakt</a>
@@ -67,9 +66,11 @@
                 </nav>
             </section>
             <section id="overview-section"><!-- Oversiktsseksjon: -->
-                <details id="details-closed">
+                <details id="details-closed"><!-- Dine valg (mobil) -->
                     <summary>Dine valg <i class="fa-solid fa-chevron-right"></i></summary>
-                    <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Picture of a resort pool by the ocean">
+                    <figure>
+                        <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Bilde av basseng ved siden av havet">
+                    </figure>
                     <h4>Parga Beach</h4>
                     <ul class="rating-sun-list">
                         <li>
@@ -113,8 +114,10 @@
                         </li>
                     </ul>
                 </details>
-                <article id="details-open">
-                    <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Picture of a resort pool by the ocean">
+                <article id="details-open"><!-- Dine valg (desktop)-->
+                    <figure>
+                        <img src="../Reisebyraa_Nettsted/images/landscape-2016308_640.jpg" alt="Bilde av basseng ved siden av havet">
+                    </figure>
                     <h4>Parga Beach</h4>
                     <ul class="rating-sun-list">
                         <li>
@@ -166,22 +169,22 @@
                         <legend>VOKSEN 18+ HOVEDBESTILLER</legend>
                         <ul class="first-name-1">
                             <li>
-                                <label>FORNAVN (IFØLGE PASS):</label>
+                                <label for="fname-person1">FORNAVN (IFØLGE PASS):</label>
                                 <input type="text" id="fname-person1" name="first-name" required>
                             </li>
                         </ul>
                         <ul class="last-name-1">
                             <li>
-                                <label>ETTERNAVN (IFØLGE PASS):</label>
+                                <label for="lname-person1">ETTERNAVN (IFØLGE PASS):</label>
                                 <input type="text" id="lname-person1" name="last-name" required>
                             </li>
                         </ul>
                         <ul class="birthday-1">
                             <li class="birthday-list">
                                 <label>FØDSELSDATO:</label>
-                                <input type="number" class="birthday" min="1" max="31" name="day" placeholder="DD" required>
-                                <input type="number" class="birthday" min="1" max="12" name="month" placeholder="MM" required>
-                                <input type="number" class="birthday" min="1910" max="2007" name="year" placeholder="ÅÅÅÅ" required>
+                                <input id="day" type="number" class="birthday" min="1" max="31" name="day" placeholder="DD" required>
+                                <input id="month" type="number" class="birthday" min="1" max="12" name="month" placeholder="MM" required>
+                                <input id="year" type="number" class="birthday" min="1910" max="2007" name="year" placeholder="ÅÅÅÅ" required>
                             </li>
                         </ul>
                         <ul class="genders-1">
@@ -195,26 +198,26 @@
                         </ul>
                         <ul class="email">
                             <li>
-                                <label>E-POSTADRESSE:</label>
-                                <input type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                                <label for="email">E-POSTADRESSE:</label>
+                                <input id="email" type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="eksempel@epost.no" required>
                             </li>
                         </ul>
                         <ul class="phone-number">
                             <li>
                                 <label for="phone-number">TELEFONNUMMER:</label>
-                                <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                                <input id="phone-number" type="tel" name="phone-number" pattern="[0-9]{8}" placeholder="8-siffere" required>
                             </li>
                         </ul>
                         <ul class="address">
                             <li>
-                                <label>GATEADRESSE:</label>
-                                <input type="text" name="address" required>
+                                <label for="address">GATEADRESSE:</label>
+                                <input id="address" type="text" name="address" required>
                             </li>
                         </ul>
                         <ul class="postal-code">
                             <li>
-                                <label>POSTNUMMER:</label>
-                                <input type="number" name="postal-code" required>
+                                <label for="postal-code">POSTNUMMER:</label>
+                                <input id="postal-code" type="number" name="postal-code" required>
                             </li>
                         </ul>
                         <ul class="city-name">
@@ -225,7 +228,7 @@
                         </ul>
                         <ul class="country">
                             <li>
-                                <label>LAND:</label>
+                                <label for="country-select">LAND:</label>
                                 <select id="country-select" name="country" required>
                                     <option value="" id="option-placeholder">Velg et land</option>
                                     <option value="norge">Norge</option>
@@ -241,13 +244,13 @@
                         <legend>VOKSEN 18+</legend>
                         <ul class="first-name-2">
                             <li>
-                                <label>FORNAVN (IFØLGE PASS):</label>
+                                <label for="fname-person2">FORNAVN (IFØLGE PASS):</label>
                                 <input type="text" id="fname-person2" name="first-name" required>
                             </li>
                         </ul>
                         <ul class="last-name-2">
                             <li>
-                                <label>ETTERNAVN (IFØLGE PASS):</label>
+                                <label for="lname-person2">ETTERNAVN (IFØLGE PASS):</label>
                                 <input type="text" id="lname-person2" name="last-name" required>
                             </li>
                         </ul>
@@ -269,31 +272,41 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <button type="submit" id="order-form-submit">Siste trinn <i class="fa-solid fa-arrow-right"></i></button>
+                    <button type="submit" id="order-form-submit" aria-label="til siste ordretrinn">Siste trinn <i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </section>
         </main>
-        <footer id="global-footer" class="global-footer"><!-- grid-area: footer; (desktop) -->
+        <footer id="global-footer" class="global-footer"><!-- Footer -->
             <section id="flags">
                 <ul>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Flag of Sweden">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/sweden.png" alt="Sveriges flagg">
+                        </figure>
                         <p>Sverige</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Flag of Denmark">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/denmark.png" alt="Danmarks flagg">
+                        </figure>
                         <p>Danmark</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Flag of Norway">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/norway.png" alt="Norges flagg">
+                        </figure>
                         <p>Norge</p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Flag of Finland">
-                        <p>Suomi</p>
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/finland.png" alt="Finlands flagg">
+                        </figure>
+                        <p><span lang="fi">Suomi</span></p>
                     </li>
                     <li>
-                        <img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Flag of The Netherlands">
+                        <figure>
+                            <img class="flag-image" src="../Reisebyraa_Nettsted/flags/netherlands.png" alt="Nederlands flagg">
+                        </figure>
                         <p>Nederland</p>
                     </li>
                 </ul>
@@ -314,8 +327,8 @@
                     <fieldset>
                         <legend>Meld deg på nyhetsbrev her</legend>
                         <form>
-                            <input type="text" placeholder="ola@example.com...">
-                            <input id="newsletter-button" type="submit" value="Send">
+                            <input type="text" placeholder="ola@example.com..." aria-label="meld deg på vårt nyhetsbrev med din e-postaddresse">
+                            <input id="newsletter-button" type="submit" value="Send" aria-label="send inn påmelding for nyhetsbrev">
                         </form>
                     </fieldset>
                     <ul>
@@ -327,23 +340,23 @@
             </section>
             <section id="customer-service">
                 <nav>
-                    <h5>KUNDESERVICE</h5>
+                    <h5 aria-label="kundeservice">KUNDESERVICE</h5>
                     <ul>
                         <li><a class="customer-service-link" href="#">Spørsmål og svar</a></li>
                         <li><a class="customer-service-link" href="#">Chat</a></li>
                         <li><a class="customer-service-link" href="#">Kontakt</a></li>
-                        <li><a class="customer-service-link" href="#">Tilgjengelighets-erklæring</a></li>
+                        <li><a class="customer-service-link" href="../Reisebyraa_Nettsted/WCAG-tilgjengelighetserklaering.xlsx">Tilgjengelighetserklæring</a></li>
                     </ul>
                 </nav>
             </section>
             <section id="social-media">
-                <h5>SOSIALE MEDIER</h5>
+                <h5 aria-label="våre sosiale medier">SOSIALE MEDIER</h5>
                 <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://no.pinterest.com/#top"><i class="fa-brands fa-pinterest"></i></a></li>
-                    <li><a href="https://www.tiktok.com/explore"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/" aria-label="følg oss på instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" aria-label="følg oss på facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://no.pinterest.com/#top" aria-label="følg oss på pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a href="https://www.tiktok.com/explore" aria-label="følg oss på tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/" aria-label="følg oss på youtube"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </section>
         </footer>
